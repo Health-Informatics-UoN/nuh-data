@@ -11,25 +11,20 @@ description: >-
 license: https://opensource.org/license/mit
 version: "0.0.1"
 
-see_also:
-  - https://healthdatagateway.org/en/dataset/1480
-
 created_by: https://github.com/Health-Informatics-UoN
 
 annotations:
-  publisher: HDR UK
   data_custodian: Nottingham University Hospitals NHS Trust
   created_by_name: Nottingham University Hospitals NHS Trust
   geographic_coverage: Nottinghamshire, England
   temporal_coverage_start: "2009-01-01"
-  temporal_coverage_end: "2025-10-03"
+  temporal_coverage_end: "2026-03-01"
   population_size: "33156"
   publishing_frequency: Quarterly
   data_standards: OMOP, OTHER
   controlled_vocabulary: OTHER
   access_request_type: Data Access Request
   access_status: In Progress
-  hdr_uk_gateway_id: "1480"
 
 keywords:
   - systemic anti-cancer therapy
