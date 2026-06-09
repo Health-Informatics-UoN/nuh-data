@@ -22,7 +22,7 @@ The Pydantic model at `src/nuh_data/datasets/<name>/model.py` is **generated** f
 ### Regenerating after a schema change
 
 ```bash
-uv run python scripts/generate.py
+uv run scripts/generate.py
 ```
 
 Commit both the YAML and the regenerated `model.py` together. CI will fail if they are out of sync.
@@ -30,7 +30,7 @@ Commit both the YAML and the regenerated `model.py` together. CI will fail if th
 ### Checking sync without regenerating
 
 ```bash
-cd scripts && uv run python check_sync.py
+cd scripts && uv run check_sync.py
 ```
 
 ### Linting schemas
