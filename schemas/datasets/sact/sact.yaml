@@ -1,0 +1,511 @@
+id: https://health-informatics-uon.github.io/nuh-data/datasets/sact
+name: sact
+title: NUH Systemic Anti-Cancer Therapy Dataset (SACT)
+description: >-
+  Clinical dataset documenting systemic anti-cancer treatment records from
+  Nottingham University Hospitals NHS Trust. Covers patients receiving systemic
+  anti-cancer therapies (chemotherapy and other systemic treatments) from 2009
+  onwards, capturing patient demographics, regimen details, cycle data, and
+  individual drug administrations.
+
+license: https://opensource.org/license/mit
+version: "0.0.1"
+
+created_by: https://github.com/Health-Informatics-UoN
+
+annotations:
+  data_custodian: Nottingham University Hospitals NHS Trust
+  created_by_name: Nottingham University Hospitals NHS Trust
+  geographic_coverage: Nottinghamshire, England
+  temporal_coverage_start: "2009-01-01"
+  temporal_coverage_end: "2026-03-01"
+  population_size: "33156"
+  publishing_frequency: Quarterly
+  data_standards: OMOP, OTHER
+  controlled_vocabulary: OTHER
+  access_request_type: Data Access Request
+  access_status: In Progress
+
+keywords:
+  - systemic anti-cancer therapy
+  - SACT
+  - oncology
+  - chemotherapy
+  - NHS
+  - Nottingham
+  - cancer treatment
+  - clinical
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sact: https://health-informatics-uon.github.io/nuh-data/datasets/sact/
+  SNOMED: http://snomed.info/id/
+  ICD: http://id.who.int/icd/entity/
+  dmd: https://dmd.nhs.uk/concept/
+
+default_prefix: sact
+default_range: string
+
+imports:
+  - linkml:types
+
+classes:
+  SACTResearchView:
+    description: >-
+      Flat research view combining patient, regimen, cycle, and drug
+      administration data. Corresponds to RVW.SACT_RESEARCH_VIEW in the
+      source database. Each row represents a single drug administration
+      event, with regimen and patient context repeated per row.
+    tree_root: true
+    slots:
+      # ETL / provenance fields
+      - etl_id
+      - etl_date
+      - direct_care_published_runid
+      - dataset_name
+      - ndo_run_date
+      - file_name
+      - file_period_start
+      - file_period_end
+      # Patient fields
+      - pseudo_nhs_number
+      - nhs_number_status
+      - date_of_birth_year
+      - date_of_birth_month
+      - date_of_birth_mid_month
+      - person_stated_gender_code
+      - llsoa
+      # Clinician / organisation fields
+      - consultant_gmc_code
+      - consultant_spec_code
+      - org_id_code_provider
+      # Diagnosis fields
+      - primary_diagnosis
+      - morphology_icd_o
+      - diagnosis_code_snomed
+      # Regimen fields
+      - adjunctive_therapy
+      - intent_of_treatment
+      - regimen
+      - height_start_reg
+      - weight_start_of_reg
+      - perf_status_start_reg_ad
+      - co_morbidity_adjustment
+      - date_decision_to_treat
+      - start_date_regimen
+      - clinical_trial
+      # Cycle fields
+      - cycle_number
+      - start_date_cycle
+      - weight_start_cycle
+      - perf_stat_start_cycle_ad
+      # Drug administration fields
+      - drug_name
+      - dm_d
+      - actual_dose_per_admin
+      - admin_meas_per_actual_dose
+      - ot_admin_meas_per_actual_dose
+      - unit_meas_snomed_ct_dm_d
+      - sact_administration_route
+      - route_admin_snomed_ct_dm_d
+      - administration_date
+      - org_identifier_sact_admin
+
+slots:
+  # ---------------------------------------------------------------------------
+  # ETL / provenance
+  # ---------------------------------------------------------------------------
+
+  etl_id:
+    description: ""
+    range: integer
+    required: false
+    annotations:
+      sql_column: ETL_ID
+      sql_type: INT
+
+  etl_date:
+    description: ""
+    range: datetime
+    required: false
+    annotations:
+      sql_column: ETL_DATE
+      sql_type: DATETIME
+
+  direct_care_published_runid:
+    description: ""
+    range: integer
+    required: false
+    annotations:
+      sql_column: DIRECT_CARE_PUBLISHED_RUNID
+      sql_type: INT
+
+  dataset_name:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: DATASET_NAME
+      sql_type: "NVARCHAR(300)"
+
+  ndo_run_date:
+    description: ""
+    range: date
+    required: false
+    annotations:
+      sql_column: NDO_RUN_DATE
+      sql_type: DATE
+
+  file_name:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: FILE_NAME
+      sql_type: "NVARCHAR(150)"
+
+  file_period_start:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: FILE_PERIOD_START
+      sql_type: "NVARCHAR(20)"
+
+  file_period_end:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: FILE_PERIOD_END
+      sql_type: "NVARCHAR(20)"
+
+  # ---------------------------------------------------------------------------
+  # Patient
+  # ---------------------------------------------------------------------------
+
+  pseudo_nhs_number:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: PSEUDO_NHS_NUMBER
+      sql_type: "VARBINARY(100)"
+      sensitivity: pseudonymised
+
+  nhs_number_status:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: NHS_NUMBER_STATUS
+      sql_type: "NVARCHAR(4)"
+
+  date_of_birth_year:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: DATE_OF_BIRTH_YEAR
+      sql_type: "NVARCHAR(8)"
+
+  date_of_birth_month:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: DATE_OF_BIRTH_MONTH
+      sql_type: "NVARCHAR(4)"
+
+  date_of_birth_mid_month:
+    description: ""
+    range: date
+    required: false
+    annotations:
+      sql_column: DATE_OF_BIRTH_MID_MONTH
+      sql_type: DATE
+
+  person_stated_gender_code:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: PERSON_STATED_GENDER_CODE
+      sql_type: "NVARCHAR(2)"
+
+  llsoa:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: LLSOA
+      sql_type: "NVARCHAR(18)"
+
+  # ---------------------------------------------------------------------------
+  # Clinician / organisation
+  # ---------------------------------------------------------------------------
+
+  consultant_gmc_code:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: CONSULTANT_GMC_CODE
+      sql_type: "NVARCHAR(16)"
+
+  consultant_spec_code:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: CONSULTANT_SPEC_CODE
+      sql_type: "NVARCHAR(16)"
+
+  org_id_code_provider:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: ORG_ID_CODE_PROVIDER
+      sql_type: "NVARCHAR(10)"
+
+  # ---------------------------------------------------------------------------
+  # Diagnosis
+  # ---------------------------------------------------------------------------
+
+  primary_diagnosis:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: PRIMARY_DIAGNOSIS
+      sql_type: "NVARCHAR(12)"
+
+  morphology_icd_o:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: MORPHOLOGY_ICD_O
+      sql_type: "NVARCHAR(14)"
+
+  diagnosis_code_snomed:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: DIAGNOSIS_CODE_SNOMED
+      sql_type: "NVARCHAR(36)"
+
+  # ---------------------------------------------------------------------------
+  # Regimen
+  # ---------------------------------------------------------------------------
+
+  adjunctive_therapy:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: ADJUNCTIVE_THERAPY
+      sql_type: "NVARCHAR(2)"
+
+  intent_of_treatment:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: INTENT_OF_TREATMENT
+      sql_type: "NVARCHAR(4)"
+
+  regimen:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: REGIMEN
+      sql_type: "NVARCHAR(300)"
+
+  height_start_reg:
+    description: ""
+    range: float
+    unit:
+      ucum_code: cm
+    required: false
+    annotations:
+      sql_column: HEIGHT_START_REG
+      sql_type: FLOAT
+
+  weight_start_of_reg:
+    description: ""
+    range: float
+    unit:
+      ucum_code: kg
+    required: false
+    annotations:
+      sql_column: WEIGHT_START_OF_REG
+      sql_type: FLOAT
+
+  perf_status_start_reg_ad:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: PERF_STATUS_START_REG_AD
+      sql_type: "NVARCHAR(2)"
+
+  co_morbidity_adjustment:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: CO_MORBIDITY_ADJUSTMENT
+      sql_type: "NVARCHAR(2)"
+
+  date_decision_to_treat:
+    description: ""
+    range: date
+    required: false
+    annotations:
+      sql_column: DATE_DECISION_TO_TREAT
+      sql_type: DATE
+
+  start_date_regimen:
+    description: ""
+    range: date
+    required: false
+    annotations:
+      sql_column: START_DATE_REGIMEN
+      sql_type: DATE
+
+  clinical_trial:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: CLINICAL_TRIAL
+      sql_type: "NVARCHAR(4)"
+
+  # ---------------------------------------------------------------------------
+  # Cycle
+  # ---------------------------------------------------------------------------
+
+  cycle_number:
+    description: ""
+    range: integer
+    required: false
+    annotations:
+      sql_column: CYCLE_NUMBER
+      sql_type: INT
+
+  start_date_cycle:
+    description: ""
+    range: date
+    required: false
+    annotations:
+      sql_column: START_DATE_CYCLE
+      sql_type: DATE
+
+  weight_start_cycle:
+    description: ""
+    range: float
+    unit:
+      ucum_code: kg
+    required: false
+    annotations:
+      sql_column: WEIGHT_START_CYCLE
+      sql_type: FLOAT
+
+  perf_stat_start_cycle_ad:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: PERF_STAT_START_CYCLE_AD
+      sql_type: "NVARCHAR(2)"
+
+  # ---------------------------------------------------------------------------
+  # Drug administration
+  # ---------------------------------------------------------------------------
+
+  drug_name:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: DRUG_NAME
+      sql_type: "NVARCHAR(110)"
+
+  dm_d:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: DM_D
+      sql_type: "NVARCHAR(36)"
+      vocabulary: NHS Dictionary of Medicines and Devices (dm+d)
+
+  actual_dose_per_admin:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: ACTUAL_DOSE_PER_ADMIN
+      sql_type: "NVARCHAR(100)"
+
+  admin_meas_per_actual_dose:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: ADMIN_MEAS_PER_ACTUAL_DOSE
+      sql_type: "NVARCHAR(16)"
+
+  ot_admin_meas_per_actual_dose:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: OT_ADMIN_MEAS_PER_ACTUAL_DOSE
+      sql_type: "NVARCHAR(30)"
+
+  unit_meas_snomed_ct_dm_d:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: UNIT_MEAS_SNOMED_CT_DM_D
+      sql_type: "NVARCHAR(36)"
+      vocabulary: SNOMED CT / dm+d
+
+  sact_administration_route:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: SACT_ADMINISTRATION_ROUTE
+      sql_type: "NVARCHAR(4)"
+
+  route_admin_snomed_ct_dm_d:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: ROUTE_ADMIN_SNOMED_CT_DM_D
+      sql_type: "NVARCHAR(36)"
+      vocabulary: SNOMED CT / dm+d
+
+  administration_date:
+    description: ""
+    range: date
+    required: false
+    annotations:
+      sql_column: ADMINISTRATION_DATE
+      sql_type: DATE
+
+  org_identifier_sact_admin:
+    description: ""
+    range: string
+    required: false
+    annotations:
+      sql_column: ORG_IDENTIFIER_SACT_ADMIN
+      sql_type: "NVARCHAR(10)"
