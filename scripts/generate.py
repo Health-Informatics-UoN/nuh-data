@@ -11,6 +11,7 @@ from pathlib import Path
 # Map from schema YAML → generated Python output
 SCHEMA_MAP: dict[str, str] = {
     "schemas/datasets/sact/sact.yaml": "src/nuh_data/datasets/sact/model.py",
+    "schemas/datasets/cosd/cosd.yaml": "src/nuh_data/datasets/cosd/model.py",
 }
 
 GEN_ARGS = ["gen-pydantic"]
