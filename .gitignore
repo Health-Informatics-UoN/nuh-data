@@ -166,6 +166,8 @@ venv.bak/
 
 # mkdocs documentation
 /site
+# generated from LinkML schemas by gen-doc
+/docs/datasets/
 
 # mypy
 .mypy_cache/

@@ -54,4 +54,7 @@ jobs:
 
       - name: Generate schema documentation
         run: |
-          uv run mkdocs gh-deploy --force
+          uv run gen-doc -d docs/datasets/sact schemas/datasets/sact/sact.yaml
+
+      - name: Deploy docs
+        run: uv run mkdocs gh-deploy --force
