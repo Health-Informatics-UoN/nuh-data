@@ -70,6 +70,34 @@ Patient-level records spanning the cancer care pathway at NUH.
 
 ---
 
+## Python Models
+
+Pydantic v2 models for each dataset are published directly from this repository. Install with pip:
+
+```bash
+pip install git+https://github.com/Health-Informatics-UoN/nuh-data.git
+```
+
+Then validate or annotate your data against the schema:
+
+```python
+from nuh_data.datasets.sact import SACTResearchView
+from nuh_data.datasets.cosd import COSDResearchView
+
+# Validate a record — Pydantic will raise on type or enum mismatches
+record = SACTResearchView(
+    pseudo_nhs_number="abc123",
+    administration_date="2023-06-01",
+    drug_name="CARBOPLATIN",
+    sact_administration_route="01",   # Intravenous
+    intent_of_treatment="P",          # Palliative
+)
+```
+
+Models are generated directly from the LinkML schemas, so field names, types, and permitted values stay in sync with the data dictionaries published in this repository.
+
+---
+
 ## Documentation
 
 Full data dictionaries and field-level documentation are published at **[health-informatics-uon.github.io/nuh-data](https://health-informatics-uon.github.io/nuh-data)**.
