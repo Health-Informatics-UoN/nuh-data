@@ -2385,49 +2385,49 @@ class COSDResearchView(ConfiguredBaseModel):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://health-informatics-uon.github.io/nuh-data/datasets/cosd',
          'tree_root': True})
 
-    etl_id: Optional[int] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETL_ID'},
+    etl_id: Optional[int] = Field(default=None, description="""Internal identifier for the ETL batch run that loaded this record.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETL_ID'},
                          'sql_type': {'tag': 'sql_type', 'value': 'INT'}},
          'domain_of': ['COSDResearchView']} })
-    etl_date: Optional[datetime ] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETL_DATE'},
+    etl_date: Optional[datetime ] = Field(default=None, description="""Date and time the ETL process ran.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETL_DATE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'DATETIME'}},
          'domain_of': ['COSDResearchView']} })
-    direct_care_published_runid: Optional[int] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    direct_care_published_runid: Optional[int] = Field(default=None, description="""Run identifier from the DirectCare publishing pipeline.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'DIRECT_CARE_PUBLISHED_RUNID'},
                          'sql_type': {'tag': 'sql_type', 'value': 'INT'}},
          'domain_of': ['COSDResearchView']} })
-    dataset_name: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'DATASET_NAME'},
+    dataset_name: Optional[str] = Field(default=None, description="""Name of the source dataset.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'DATASET_NAME'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(300)'}},
          'domain_of': ['COSDResearchView']} })
-    ndo_run_date: Optional[date] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'NDO_RUN_DATE'},
+    ndo_run_date: Optional[date] = Field(default=None, description="""Date the National Data Opt-out (NDO) filter was applied to this record.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'NDO_RUN_DATE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'DATE'}},
          'domain_of': ['COSDResearchView']} })
-    file_name: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'FILE_NAME'},
+    file_name: Optional[str] = Field(default=None, description="""Name of the source COSD submission file.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'FILE_NAME'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(1000)'}},
          'domain_of': ['COSDResearchView']} })
-    c000010_id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'C000010_ID'},
+    c000010_id: Optional[str] = Field(default=None, description="""Unique identifier (UUID) for the COSD submission file.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'C000010_ID'},
                          'sql_type': {'tag': 'sql_type', 'value': 'VARCHAR(36)'}},
          'domain_of': ['COSDResearchView']} })
-    c000020_id_submitting_org: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    c000020_id_submitting_org: Optional[str] = Field(default=None, description="""Organisation identifier of the organisation submitting the COSD file.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'C000020_ID_SUBMITTING_ORG'},
                          'sql_type': {'tag': 'sql_type', 'value': 'VARCHAR(6)'}},
          'domain_of': ['COSDResearchView']} })
-    c000030_record_count: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    c000030_record_count: Optional[str] = Field(default=None, description="""Total number of records contained in the submission file.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'C000030_RECORD_COUNT'},
                          'sql_type': {'tag': 'sql_type', 'value': 'VARCHAR(7)'}},
          'domain_of': ['COSDResearchView']} })
-    c000040_reporting_period_start_date: Optional[date] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    c000040_reporting_period_start_date: Optional[date] = Field(default=None, description="""Start date of the reporting period covered by this submission.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'C000040_REPORTING_PERIOD_START_DATE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'DATE'}},
          'domain_of': ['COSDResearchView']} })
-    c000050_reporting_period_end_date: Optional[date] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    c000050_reporting_period_end_date: Optional[date] = Field(default=None, description="""End date of the reporting period covered by this submission.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'C000050_REPORTING_PERIOD_END_DATE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'DATE'}},
          'domain_of': ['COSDResearchView']} })
-    c000060_file_creation_datetime: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    c000060_file_creation_datetime: Optional[str] = Field(default=None, description="""Date and time the submission file was created.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'C000060_FILE_CREATION_DATETIME'},
                          'sql_type': {'tag': 'sql_type', 'value': 'VARCHAR(19)'}},
          'domain_of': ['COSDResearchView']} })
-    record_type: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'RECORD_TYPE'},
+    record_type: Optional[str] = Field(default=None, description="""Indicates whether the record relates to a primary or non-primary cancer pathway.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'RECORD_TYPE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(100)'}},
          'domain_of': ['COSDResearchView']} })
     pseudo_c000070_unique_record_id: Optional[str] = Field(default=None, description="""The universal unique identifier (UUID) for the record""", json_schema_extra = { "linkml_meta": {'annotations': {'sensitivity': {'tag': 'sensitivity',
@@ -2446,15 +2446,15 @@ class COSDResearchView(ConfiguredBaseModel):
                                         'value': 'CR1350_NHS_NUM_STAT_CODE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'VARCHAR(2)'}},
          'domain_of': ['COSDResearchView']} })
-    date_of_birth_year: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    date_of_birth_year: Optional[str] = Field(default=None, description="""Year component of the patient's date of birth.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'DATE_OF_BIRTH_YEAR'},
                          'sql_type': {'tag': 'sql_type', 'value': 'VARCHAR(4)'}},
          'domain_of': ['COSDResearchView']} })
-    date_of_birth_month: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    date_of_birth_month: Optional[str] = Field(default=None, description="""Month component of the patient's date of birth.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'DATE_OF_BIRTH_MONTH'},
                          'sql_type': {'tag': 'sql_type', 'value': 'VARCHAR(2)'}},
          'domain_of': ['COSDResearchView']} })
-    date_of_birth_mid_month: Optional[date] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    date_of_birth_mid_month: Optional[date] = Field(default=None, description="""Mid-month proxy date of birth, derived as the 15th of the patient's birth month.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'DATE_OF_BIRTH_MID_MONTH'},
                          'sql_type': {'tag': 'sql_type', 'value': 'DATE'}},
          'domain_of': ['COSDResearchView']} })
@@ -2554,7 +2554,7 @@ More than one site can be recorded""", json_schema_extra = { "linkml_meta": {'an
                                         'value': 'NPP_CR7030_TRANS_SNOMED_VERSION_CURRENT_TRANS'},
                          'sql_type': {'tag': 'sql_type', 'value': 'VARCHAR(20)'}},
          'domain_of': ['COSDResearchView']} })
-    llsoa: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'LLSOA'},
+    llsoa: Optional[str] = Field(default=None, description="""Lower Layer Super Output Area code, used as a geographic indicator for deprivation and service planning.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'LLSOA'},
                          'sql_type': {'tag': 'sql_type', 'value': 'VARCHAR(9)'}},
          'domain_of': ['COSDResearchView']} })
     cr3170_person_stated_gender_code: Optional[PersonStatedGenderCode] = Field(default=None, description="""Person's gender as self-declared (or inferred by observation for those unable to declare their PERSON STATED GENDER).""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
@@ -3081,7 +3081,7 @@ More than one site can be recorded""", json_schema_extra = { "linkml_meta": {'an
                                         'value': 'CR6450_BODY_MASS_INDEX1'},
                          'sql_type': {'tag': 'sql_type', 'value': 'VARCHAR(4)'}},
          'domain_of': ['COSDResearchView']} })
-    cr6450_date_observation_measured1: Optional[date] = Field(default=None, description="""Estimate of a patient's Body Mass Index (BMI). If Height and Weight are provided, this can be automatically calculated.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    cr6450_date_observation_measured1: Optional[date] = Field(default=None, description="""Date the height, weight, and BMI observations were recorded (first occasion).""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'CR6450_DATE_OBSERVATION_MEASURED1'},
                          'sql_type': {'tag': 'sql_type', 'value': 'DATE'}},
          'domain_of': ['COSDResearchView']} })
@@ -3097,7 +3097,7 @@ More than one site can be recorded""", json_schema_extra = { "linkml_meta": {'an
                                         'value': 'CR6450_BODY_MASS_INDEX2'},
                          'sql_type': {'tag': 'sql_type', 'value': 'VARCHAR(4)'}},
          'domain_of': ['COSDResearchView']} })
-    cr6450_date_observation_measured2: Optional[date] = Field(default=None, description="""Estimate of a patient's Body Mass Index (BMI). If Height and Weight are provided, this can be automatically calculated.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    cr6450_date_observation_measured2: Optional[date] = Field(default=None, description="""Date the height, weight, and BMI observations were recorded (second occasion).""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'CR6450_DATE_OBSERVATION_MEASURED2'},
                          'sql_type': {'tag': 'sql_type', 'value': 'DATE'}},
          'domain_of': ['COSDResearchView']} })
