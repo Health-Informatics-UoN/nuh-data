@@ -10,7 +10,7 @@ All datasets are pseudonymised research views. Access is subject to a formal dat
 
 ### [Systemic Anti-Cancer Therapy (SACT)](datasets/sact/index.md)
 
-> **33,156 patients · 2009–present · Quarterly**
+> **2009–present · Quarterly**
 
 Patient-level records of systemic anti-cancer treatments (chemotherapy, targeted therapies, immunotherapy, and other drug-based cancer treatments) administered.
 
