@@ -598,7 +598,7 @@ slots:
   # ---------------------------------------------------------------------------
 
   etl_id:
-    description: ""
+    description: "Internal identifier for the ETL batch run that loaded this record."
     range: integer
     required: false
     annotations:
@@ -606,7 +606,7 @@ slots:
       sql_type: "INT"
 
   etl_date:
-    description: ""
+    description: "Date and time the ETL process ran."
     range: datetime
     required: false
     annotations:
@@ -614,7 +614,7 @@ slots:
       sql_type: "DATETIME"
 
   direct_care_published_runid:
-    description: ""
+    description: "Run identifier from the DirectCare publishing pipeline."
     range: integer
     required: false
     annotations:
@@ -622,7 +622,7 @@ slots:
       sql_type: "INT"
 
   dataset_name:
-    description: ""
+    description: "Name of the source dataset."
     range: string
     required: false
     annotations:
@@ -630,7 +630,7 @@ slots:
       sql_type: "NVARCHAR(300)"
 
   ndo_run_date:
-    description: ""
+    description: "Date the National Data Opt-out (NDO) filter was applied to this record."
     range: date
     required: false
     annotations:
@@ -638,7 +638,7 @@ slots:
       sql_type: "DATE"
 
   file_name:
-    description: ""
+    description: "Name of the source COSD submission file."
     range: string
     required: false
     annotations:
@@ -650,7 +650,7 @@ slots:
   # ---------------------------------------------------------------------------
 
   c000010_id:
-    description: ""
+    description: "Unique identifier (UUID) for the COSD submission file."
     range: string
     required: false
     annotations:
@@ -658,7 +658,7 @@ slots:
       sql_type: "VARCHAR(36)"
 
   c000020_id_submitting_org:
-    description: ""
+    description: "Organisation identifier of the organisation submitting the COSD file."
     range: string
     required: false
     annotations:
@@ -666,7 +666,7 @@ slots:
       sql_type: "VARCHAR(6)"
 
   c000030_record_count:
-    description: ""
+    description: "Total number of records contained in the submission file."
     range: string
     required: false
     annotations:
@@ -674,7 +674,7 @@ slots:
       sql_type: "VARCHAR(7)"
 
   c000040_reporting_period_start_date:
-    description: ""
+    description: "Start date of the reporting period covered by this submission."
     range: date
     required: false
     annotations:
@@ -682,7 +682,7 @@ slots:
       sql_type: "DATE"
 
   c000050_reporting_period_end_date:
-    description: ""
+    description: "End date of the reporting period covered by this submission."
     range: date
     required: false
     annotations:
@@ -690,7 +690,7 @@ slots:
       sql_type: "DATE"
 
   c000060_file_creation_datetime:
-    description: ""
+    description: "Date and time the submission file was created."
     range: string
     required: false
     annotations:
@@ -702,7 +702,7 @@ slots:
   # ---------------------------------------------------------------------------
 
   record_type:
-    description: ""
+    description: "Indicates whether the record relates to a primary or non-primary cancer pathway."
     range: string
     required: false
     annotations:
@@ -744,7 +744,7 @@ slots:
       sql_type: "VARCHAR(2)"
 
   date_of_birth_year:
-    description: ""
+    description: "Year component of the patient's date of birth."
     range: string
     required: false
     annotations:
@@ -752,7 +752,7 @@ slots:
       sql_type: "VARCHAR(4)"
 
   date_of_birth_month:
-    description: ""
+    description: "Month component of the patient's date of birth."
     range: string
     required: false
     annotations:
@@ -760,7 +760,7 @@ slots:
       sql_type: "VARCHAR(2)"
 
   date_of_birth_mid_month:
-    description: ""
+    description: "Mid-month proxy date of birth, derived as the 15th of the patient's birth month."
     range: date
     required: false
     annotations:
@@ -982,7 +982,7 @@ slots:
       sql_type: "VARCHAR(20)"
 
   llsoa:
-    description: ""
+    description: "Lower Layer Super Output Area code, used as a geographic indicator for deprivation and service planning."
     range: string
     required: false
     annotations:
@@ -2105,7 +2105,7 @@ slots:
   # ---------------------------------------------------------------------------
 
   cr6450_date_observation_measured1:
-    description: "Estimate of a patient's Body Mass Index (BMI). If Height and Weight are provided, this can be automatically calculated."
+    description: "Date the height, weight, and BMI observations were recorded (first occasion)."
     range: date
     required: false
     annotations:
@@ -2137,7 +2137,7 @@ slots:
       sql_type: "VARCHAR(4)"
 
   cr6450_date_observation_measured2:
-    description: "Estimate of a patient's Body Mass Index (BMI). If Height and Weight are provided, this can be automatically calculated."
+    description: "Date the height, weight, and BMI observations were recorded (second occasion)."
     range: date
     required: false
     annotations:
