@@ -121,7 +121,7 @@ linkml_meta = LinkMLMeta({'annotations': {'access_request_type': {'tag': 'access
                              'prefix_reference': 'https://w3id.org/linkml/'},
                   'sact': {'prefix_prefix': 'sact',
                            'prefix_reference': 'https://health-informatics-uon.github.io/nuh-data/datasets/sact/'}},
-     'source_file': '/tmp/sact.yaml',
+     'source_file': 'schemas/datasets/sact/sact.yaml',
      'title': 'NUH Systemic Anti-Cancer Therapy Dataset (SACT)'} )
 
 

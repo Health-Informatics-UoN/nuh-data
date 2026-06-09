@@ -1,33 +1,48 @@
-"""Regenerate Pydantic models from LinkML schemas.
+#!/usr/bin/env python3
+"""Regenerate all Pydantic models from LinkML schemas.
 
-Run with: uv run python scripts/generate.py
-Requires: uv sync --group dev
+Usage:
+    uv run python scripts/generate.py
 """
-
 import subprocess
+import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+# Map from schema YAML → generated Python output
+SCHEMA_MAP: dict[str, str] = {
+    "schemas/datasets/sact/sact.yaml": "src/nuh_data/datasets/sact/model.py",
+}
 
-SCHEMAS = [
-    (
-        ROOT / "schemas/datasets/sact/sact.yaml",
-        ROOT / "src/nuh_data/datasets/sact/model.py",
-    ),
-]
+GEN_ARGS = ["gen-pydantic"]
 
 
-def main() -> None:
-    for schema, output in SCHEMAS:
+def generate() -> int:
+    root = Path(__file__).parent.parent
+    errors: list[str] = []
+
+    for schema_path, output_path in SCHEMA_MAP.items():
         result = subprocess.run(
-            ["gen-pydantic", str(schema)],
+            GEN_ARGS + [schema_path],
             capture_output=True,
             text=True,
-            check=True,
+            cwd=root,
         )
-        output.write_text(result.stdout)
-        print(f"Generated {output.relative_to(ROOT)}")
+        if result.returncode != 0:
+            errors.append(f"{schema_path}: {result.stderr.strip()}")
+            continue
+
+        out = root / output_path
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(result.stdout)
+        print(f"  generated {output_path}")
+
+    if errors:
+        for e in errors:
+            print(f"ERROR: {e}", file=sys.stderr)
+        return 1
+
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(generate())

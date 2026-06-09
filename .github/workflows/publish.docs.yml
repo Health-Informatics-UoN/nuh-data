@@ -2,7 +2,7 @@
 name: Deploy docs
 on: # yamllint disable-line rule:truthy
   push:
-    branches: [feat/setup]
+    branches: [main]
   workflow_dispatch:
 
 permissions: {}
