@@ -10,7 +10,7 @@ All datasets are pseudonymised research views. Access is subject to a formal dat
 
 ### Systemic Anti-Cancer Therapy (SACT)
 
-> **33,156 patients · 2009–present · Quarterly**
+> **2009–present · Quarterly**
 
 Patient-level records of systemic anti-cancer treatments (chemotherapy, targeted therapies, immunotherapy, and other drug-based cancer treatments) administered.
 
@@ -26,8 +26,6 @@ Patient-level records of systemic anti-cancer treatments (chemotherapy, targeted
 | Outcomes | Dose reduction, regimen completion (curative), reason not completed, non-curative benefit, toxicity |
 
 **Coding standards:** ICD-10, ICD-O-3, SNOMED CT, NHS dm+d
-
-**HDR UK Gateway:** [healthdatagateway.org/en/dataset/1480](https://healthdatagateway.org/en/dataset/1480)
 
 ---
 
