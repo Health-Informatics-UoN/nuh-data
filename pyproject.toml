@@ -1,6 +1,6 @@
 [project]
 name = "nuh-data"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Pydantic models for NUH data schemas"
 readme = "README.md"
 requires-python = ">=3.13"
@@ -9,11 +9,14 @@ dependencies = [
 ]
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/nuh_data"]
+
+[tool.hatch.version]
+source = "vcs"
 
 [dependency-groups]
 dev = [
