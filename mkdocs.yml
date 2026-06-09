@@ -8,3 +8,11 @@ theme:
   palette:
     scheme: default
     primary: teal
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
