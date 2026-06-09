@@ -9,7 +9,19 @@
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
+         <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/AdjunctiveTherapyType/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/AdministrationMeasurementCode/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
          <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/Boolean/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/ClinicalTrialIndicator/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
@@ -45,11 +57,19 @@
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
+         <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/IntentOfTreatment/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
          <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/Jsonpath/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
          <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/Jsonpointer/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/NHSNumberStatusCode/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
@@ -62,6 +82,18 @@
     </url>
     <url>
          <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/Objectidentifier/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/PerformanceStatusAdult/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/PersonStatedGenderCode/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/SACTAdministrationRouteCode/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>
@@ -86,6 +118,10 @@
     </url>
     <url>
          <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/Uriorcurie/</loc>
+         <lastmod>2026-06-09</lastmod>
+    </url>
+    <url>
+         <loc>https://health-informatics-uon.github.io/nuh-data/datasets/sact/YesNoIndicator/</loc>
          <lastmod>2026-06-09</lastmod>
     </url>
     <url>

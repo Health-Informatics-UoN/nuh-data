@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://health-informatics-uon.github.io/nuh-data/datasets/sact/SACTResearchView/">
       
       
-        <link rel="prev" href="../Objectidentifier/">
+        <link rel="prev" href="../SACTAdministrationRouteCode/">
       
       
         <link rel="next" href="../Sparqlpath/">
@@ -383,6 +383,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../AdjunctiveTherapyType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: AdjunctiveTherapyType
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AdministrationMeasurementCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: AdministrationMeasurementCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Boolean/" class="md-nav__link">
         
   
@@ -391,6 +447,34 @@
     
   
     Boolean
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ClinicalTrialIndicator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: ClinicalTrialIndicator
   
 
     
@@ -635,6 +719,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../IntentOfTreatment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: IntentOfTreatment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Jsonpath/" class="md-nav__link">
         
   
@@ -671,6 +783,34 @@
     
   
     Jsonpointer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NHSNumberStatusCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: NHSNumberStatusCode
   
 
     
@@ -755,6 +895,90 @@
     
   
     Objectidentifier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PerformanceStatusAdult/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: PerformanceStatusAdult
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PersonStatedGenderCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: PersonStatedGenderCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SACTAdministrationRouteCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: SACTAdministrationRouteCode
   
 
     
@@ -933,6 +1157,34 @@
     
   
     Uriorcurie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../YesNoIndicator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: YesNoIndicator
   
 
     
@@ -2307,13 +2559,49 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
       SACTResearchView : adjunctive_therapy
 
+
+
+
+
+        SACTResearchView --&gt; &quot;0..1&quot; AdjunctiveTherapyType : adjunctive_therapy
+        click AdjunctiveTherapyType href &quot;../AdjunctiveTherapyType/&quot;
+
+
+
       SACTResearchView : admin_meas_per_actual_dose
+
+
+
+
+
+        SACTResearchView --&gt; &quot;0..1&quot; AdministrationMeasurementCode : admin_meas_per_actual_dose
+        click AdministrationMeasurementCode href &quot;../AdministrationMeasurementCode/&quot;
+
+
 
       SACTResearchView : administration_date
 
       SACTResearchView : clinical_trial
 
+
+
+
+
+        SACTResearchView --&gt; &quot;0..1&quot; ClinicalTrialIndicator : clinical_trial
+        click ClinicalTrialIndicator href &quot;../ClinicalTrialIndicator/&quot;
+
+
+
       SACTResearchView : co_morbidity_adjustment
+
+
+
+
+
+        SACTResearchView --&gt; &quot;0..1&quot; YesNoIndicator : co_morbidity_adjustment
+        click YesNoIndicator href &quot;../YesNoIndicator/&quot;
+
+
 
       SACTResearchView : consultant_gmc_code
 
@@ -2353,6 +2641,15 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
       SACTResearchView : intent_of_treatment
 
+
+
+
+
+        SACTResearchView --&gt; &quot;0..1&quot; IntentOfTreatment : intent_of_treatment
+        click IntentOfTreatment href &quot;../IntentOfTreatment/&quot;
+
+
+
       SACTResearchView : llsoa
 
       SACTResearchView : morphology_icd_o
@@ -2360,6 +2657,15 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
       SACTResearchView : ndo_run_date
 
       SACTResearchView : nhs_number_status
+
+
+
+
+
+        SACTResearchView --&gt; &quot;0..1&quot; NHSNumberStatusCode : nhs_number_status
+        click NHSNumberStatusCode href &quot;../NHSNumberStatusCode/&quot;
+
+
 
       SACTResearchView : org_id_code_provider
 
@@ -2369,9 +2675,36 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
       SACTResearchView : perf_stat_start_cycle_ad
 
+
+
+
+
+        SACTResearchView --&gt; &quot;0..1&quot; PerformanceStatusAdult : perf_stat_start_cycle_ad
+        click PerformanceStatusAdult href &quot;../PerformanceStatusAdult/&quot;
+
+
+
       SACTResearchView : perf_status_start_reg_ad
 
+
+
+
+
+        SACTResearchView --&gt; &quot;0..1&quot; PerformanceStatusAdult : perf_status_start_reg_ad
+        click PerformanceStatusAdult href &quot;../PerformanceStatusAdult/&quot;
+
+
+
       SACTResearchView : person_stated_gender_code
+
+
+
+
+
+        SACTResearchView --&gt; &quot;0..1&quot; PersonStatedGenderCode : person_stated_gender_code
+        click PersonStatedGenderCode href &quot;../PersonStatedGenderCode/&quot;
+
+
 
       SACTResearchView : primary_diagnosis
 
@@ -2382,6 +2715,15 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
       SACTResearchView : route_admin_snomed_ct_dm_d
 
       SACTResearchView : sact_administration_route
+
+
+
+
+
+        SACTResearchView --&gt; &quot;0..1&quot; SACTAdministrationRouteCode : sact_administration_route
+        click SACTAdministrationRouteCode href &quot;../SACTAdministrationRouteCode/&quot;
+
+
 
       SACTResearchView : start_date_cycle
 
@@ -2421,43 +2763,43 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 | [file_name](file_name.md) | 0..1 <br/> [String](String.md) |  | direct |
 | [file_period_start](file_period_start.md) | 0..1 <br/> [String](String.md) |  | direct |
 | [file_period_end](file_period_end.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [pseudo_nhs_number](pseudo_nhs_number.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [nhs_number_status](nhs_number_status.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [date_of_birth_year](date_of_birth_year.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [date_of_birth_month](date_of_birth_month.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [date_of_birth_mid_month](date_of_birth_mid_month.md) | 0..1 <br/> [Date](Date.md) |  | direct |
-| [person_stated_gender_code](person_stated_gender_code.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [llsoa](llsoa.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [consultant_gmc_code](consultant_gmc_code.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [consultant_spec_code](consultant_spec_code.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [org_id_code_provider](org_id_code_provider.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [primary_diagnosis](primary_diagnosis.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [morphology_icd_o](morphology_icd_o.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [diagnosis_code_snomed](diagnosis_code_snomed.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [adjunctive_therapy](adjunctive_therapy.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [intent_of_treatment](intent_of_treatment.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [regimen](regimen.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [height_start_reg](height_start_reg.md) | 0..1 <br/> [Float](Float.md) |  | direct |
-| [weight_start_of_reg](weight_start_of_reg.md) | 0..1 <br/> [Float](Float.md) |  | direct |
-| [perf_status_start_reg_ad](perf_status_start_reg_ad.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [co_morbidity_adjustment](co_morbidity_adjustment.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [date_decision_to_treat](date_decision_to_treat.md) | 0..1 <br/> [Date](Date.md) |  | direct |
-| [start_date_regimen](start_date_regimen.md) | 0..1 <br/> [Date](Date.md) |  | direct |
-| [clinical_trial](clinical_trial.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [cycle_number](cycle_number.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
-| [start_date_cycle](start_date_cycle.md) | 0..1 <br/> [Date](Date.md) |  | direct |
-| [weight_start_cycle](weight_start_cycle.md) | 0..1 <br/> [Float](Float.md) |  | direct |
-| [perf_stat_start_cycle_ad](perf_stat_start_cycle_ad.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [drug_name](drug_name.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [dm_d](dm_d.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [actual_dose_per_admin](actual_dose_per_admin.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [admin_meas_per_actual_dose](admin_meas_per_actual_dose.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [ot_admin_meas_per_actual_dose](ot_admin_meas_per_actual_dose.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [unit_meas_snomed_ct_dm_d](unit_meas_snomed_ct_dm_d.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [sact_administration_route](sact_administration_route.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [route_admin_snomed_ct_dm_d](route_admin_snomed_ct_dm_d.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [administration_date](administration_date.md) | 0..1 <br/> [Date](Date.md) |  | direct |
-| [org_identifier_sact_admin](org_identifier_sact_admin.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [pseudo_nhs_number](pseudo_nhs_number.md) | 0..1 <br/> [String](String.md) | The NHS NUMBER, the primary identifier of a PERSON, is a unique identifier fo... | direct |
+| [nhs_number_status](nhs_number_status.md) | 0..1 <br/> [NHSNumberStatusCode](NHSNumberStatusCode.md) | The NHS NUMBER STATUS INDICATOR CODE indicates the verification status of the... | direct |
+| [date_of_birth_year](date_of_birth_year.md) | 0..1 <br/> [String](String.md) | Year component of the patient's date of birth, extracted from DATE OF BIRTH f... | direct |
+| [date_of_birth_month](date_of_birth_month.md) | 0..1 <br/> [String](String.md) | Month component of the patient's date of birth, extracted from DATE OF BIRTH ... | direct |
+| [date_of_birth_mid_month](date_of_birth_mid_month.md) | 0..1 <br/> [Date](Date.md) | Approximate date of birth using the 15th of the birth month, for use in age c... | direct |
+| [person_stated_gender_code](person_stated_gender_code.md) | 0..1 <br/> [PersonStatedGenderCode](PersonStatedGenderCode.md) | Person's gender as self-declared (or inferred by observation for those unable... | direct |
+| [llsoa](llsoa.md) | 0..1 <br/> [String](String.md) | Lower Layer Super Output Area, derived from PATIENT POSTCODE for geographic a... | direct |
+| [consultant_gmc_code](consultant_gmc_code.md) | 0..1 <br/> [String](String.md) | Code of the consultant who initiated the SACT treatment | direct |
+| [consultant_spec_code](consultant_spec_code.md) | 0..1 <br/> [String](String.md) | Specialty code of the consultant who initiated the SACT treatment | direct |
+| [org_id_code_provider](org_id_code_provider.md) | 0..1 <br/> [String](String.md) | The ORGANISATION IDENTIFIER of the Organisation acting as a Health Care Provi... | direct |
+| [primary_diagnosis](primary_diagnosis.md) | 0..1 <br/> [String](String.md) | Primary diagnosis at time of decision to treat, coded using ICD | direct |
+| [morphology_icd_o](morphology_icd_o.md) | 0..1 <br/> [String](String.md) | Morphology coded using ICD-O at time of decision to treat | direct |
+| [diagnosis_code_snomed](diagnosis_code_snomed.md) | 0..1 <br/> [String](String.md) | SNOMED CT concept ID identifying the clinical diagnosis given to the patient | direct |
+| [adjunctive_therapy](adjunctive_therapy.md) | 0..1 <br/> [AdjunctiveTherapyType](AdjunctiveTherapyType.md) | Adjunctive therapy is therapy given in addition to the main therapy to maximi... | direct |
+| [intent_of_treatment](intent_of_treatment.md) | 0..1 <br/> [IntentOfTreatment](IntentOfTreatment.md) | Intent of the SACT regimen | direct |
+| [regimen](regimen.md) | 0..1 <br/> [String](String.md) | The acronym derived from the drugs used in the Anti-Cancer Drug Regimen, used... | direct |
+| [height_start_reg](height_start_reg.md) | 0..1 <br/> [Float](Float.md) | Height in metres at start of SACT regimen | direct |
+| [weight_start_of_reg](weight_start_of_reg.md) | 0..1 <br/> [Float](Float.md) | Weight in kilogrammes at start of SACT regimen | direct |
+| [perf_status_start_reg_ad](perf_status_start_reg_ad.md) | 0..1 <br/> [PerformanceStatusAdult](PerformanceStatusAdult.md) | WHO performance status at start of the regimen, for patients aged 19 years an... | direct |
+| [co_morbidity_adjustment](co_morbidity_adjustment.md) | 0..1 <br/> [YesNoIndicator](YesNoIndicator.md) | Whether the patient's overall physical state (other diseases and conditions) ... | direct |
+| [date_decision_to_treat](date_decision_to_treat.md) | 0..1 <br/> [Date](Date.md) | The date on which the consultation between the PATIENT and the clinician took... | direct |
+| [start_date_regimen](start_date_regimen.md) | 0..1 <br/> [Date](Date.md) | The first administration date of the first cycle of a regimen | direct |
+| [clinical_trial](clinical_trial.md) | 0..1 <br/> [ClinicalTrialIndicator](ClinicalTrialIndicator.md) | Records whether the patient is currently in an active Systemic Anti-Cancer Th... | direct |
+| [cycle_number](cycle_number.md) | 0..1 <br/> [Integer](Integer.md) | Cycle number, numbered sequentially within each regimen | direct |
+| [start_date_cycle](start_date_cycle.md) | 0..1 <br/> [Date](Date.md) | Date of first drug administration in each cycle | direct |
+| [weight_start_cycle](weight_start_cycle.md) | 0..1 <br/> [Float](Float.md) | Weight in kilogrammes at start of the cycle | direct |
+| [perf_stat_start_cycle_ad](perf_stat_start_cycle_ad.md) | 0..1 <br/> [PerformanceStatusAdult](PerformanceStatusAdult.md) | WHO performance status at start of the cycle, for patients aged 19 years and ... | direct |
+| [drug_name](drug_name.md) | 0..1 <br/> [String](String.md) | The name of the anti-cancer drug, taken from the British National Formulary | direct |
+| [dm_d](dm_d.md) | 0..1 <br/> [String](String.md) | The unique ID from the dm+d (Dictionary of Medicines and Devices) database, b... | direct |
+| [actual_dose_per_admin](actual_dose_per_admin.md) | 0..1 <br/> [String](String.md) | Dose in mg or other applicable unit for each administration in a SACT cycle | direct |
+| [admin_meas_per_actual_dose](admin_meas_per_actual_dose.md) | 0..1 <br/> [AdministrationMeasurementCode](AdministrationMeasurementCode.md) | Units of measurement used for each administration in a SACT cycle | direct |
+| [ot_admin_meas_per_actual_dose](ot_admin_meas_per_actual_dose.md) | 0..1 <br/> [String](String.md) | Free-text description of a unit of measurement not available within the coded... | direct |
+| [unit_meas_snomed_ct_dm_d](unit_meas_snomed_ct_dm_d.md) | 0..1 <br/> [String](String.md) | The SNOMED CT concept ID from the NHS Dictionary of Medicines and Devices ide... | direct |
+| [sact_administration_route](sact_administration_route.md) | 0..1 <br/> [SACTAdministrationRouteCode](SACTAdministrationRouteCode.md) | The prescribed method of delivery for each administration in a SACT cycle | direct |
+| [route_admin_snomed_ct_dm_d](route_admin_snomed_ct_dm_d.md) | 0..1 <br/> [String](String.md) | The SNOMED CT concept ID from the NHS Dictionary of Medicines and Devices ide... | direct |
+| [administration_date](administration_date.md) | 0..1 <br/> [Date](Date.md) | The date on which the anti-cancer drug was administered to a patient, an infu... | direct |
+| [org_identifier_sact_admin](org_identifier_sact_admin.md) | 0..1 <br/> [String](String.md) | Organisation Identifier of the organisation responsible for each administrati... | direct |
 
 
 
@@ -2724,7 +3066,9 @@ attributes:
       sensitivity:
         tag: sensitivity
         value: pseudonymised
-    description: ''
+    description: The NHS NUMBER, the primary identifier of a PERSON, is a unique identifier
+      for a PATIENT within the NHS in England and Wales. Pseudonymised for research
+      use.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2741,13 +3085,14 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(4)
-    description: ''
+    description: The NHS NUMBER STATUS INDICATOR CODE indicates the verification status
+      of the NHS number provided.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
     domain_of:
     - SACTResearchView
-    range: string
+    range: NHSNumberStatusCode
     required: false
   date_of_birth_year:
     name: date_of_birth_year
@@ -2758,7 +3103,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(8)
-    description: ''
+    description: Year component of the patient's date of birth, extracted from DATE
+      OF BIRTH for privacy preservation.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2775,7 +3121,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(4)
-    description: ''
+    description: Month component of the patient's date of birth, extracted from DATE
+      OF BIRTH for privacy preservation.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2792,7 +3139,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: DATE
-    description: ''
+    description: Approximate date of birth using the 15th of the birth month, for
+      use in age calculations while preserving patient privacy.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2809,13 +3157,14 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(2)
-    description: ''
+    description: Person's gender as self-declared (or inferred by observation for
+      those unable to declare their PERSON STATED GENDER).
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
     domain_of:
     - SACTResearchView
-    range: string
+    range: PersonStatedGenderCode
     required: false
   llsoa:
     name: llsoa
@@ -2826,7 +3175,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(18)
-    description: ''
+    description: Lower Layer Super Output Area, derived from PATIENT POSTCODE for
+      geographic analysis while preserving patient privacy.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2843,7 +3193,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(16)
-    description: ''
+    description: Code of the consultant who initiated the SACT treatment. Derived
+      from the GENERAL MEDICAL COUNCIL REFERENCE NUMBER.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2860,7 +3211,7 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(16)
-    description: ''
+    description: Specialty code of the consultant who initiated the SACT treatment.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2877,7 +3228,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(10)
-    description: ''
+    description: The ORGANISATION IDENTIFIER of the Organisation acting as a Health
+      Care Provider. Complies with ANANA standard DCB0090.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2894,7 +3246,9 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(12)
-    description: ''
+    description: Primary diagnosis at time of decision to treat, coded using ICD.
+      This is the PRIMARY DIAGNOSIS (ICD) at the start of the Systemic Anti-Cancer
+      Therapy.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2911,7 +3265,9 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(14)
-    description: ''
+    description: Morphology coded using ICD-O at time of decision to treat. This is
+      the Morphology ICD-O at the start of the Systemic Anti-Cancer Therapy. Required
+      for Haematology cases.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2928,7 +3284,11 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(36)
-    description: ''
+      vocabulary:
+        tag: vocabulary
+        value: SNOMED CT
+    description: SNOMED CT concept ID identifying the clinical diagnosis given to
+      the patient.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2945,13 +3305,15 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(2)
-    description: ''
+    description: Adjunctive therapy is therapy given in addition to the main therapy
+      to maximise its effectiveness. Records whether the therapy was Adjuvant (after
+      the main therapy), Neo-Adjuvant (before the main therapy), or not applicable.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
     domain_of:
     - SACTResearchView
-    range: string
+    range: AdjunctiveTherapyType
     required: false
   intent_of_treatment:
     name: intent_of_treatment
@@ -2962,13 +3324,13 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(4)
-    description: ''
+    description: Intent of the SACT regimen.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
     domain_of:
     - SACTResearchView
-    range: string
+    range: IntentOfTreatment
     required: false
   regimen:
     name: regimen
@@ -2979,7 +3341,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(300)
-    description: ''
+    description: The acronym derived from the drugs used in the Anti-Cancer Drug Regimen,
+      used to identify the drugs used in the regimen.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -2996,7 +3359,7 @@ attributes:
       sql_type:
         tag: sql_type
         value: FLOAT
-    description: ''
+    description: Height in metres at start of SACT regimen.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3005,7 +3368,7 @@ attributes:
     range: float
     required: false
     unit:
-      ucum_code: cm
+      ucum_code: m
   weight_start_of_reg:
     name: weight_start_of_reg
     annotations:
@@ -3015,7 +3378,7 @@ attributes:
       sql_type:
         tag: sql_type
         value: FLOAT
-    description: ''
+    description: Weight in kilogrammes at start of SACT regimen.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3034,13 +3397,14 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(2)
-    description: ''
+    description: WHO performance status at start of the regimen, for patients aged
+      19 years and above.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
     domain_of:
     - SACTResearchView
-    range: string
+    range: PerformanceStatusAdult
     required: false
   co_morbidity_adjustment:
     name: co_morbidity_adjustment
@@ -3051,13 +3415,15 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(2)
-    description: ''
+    description: Whether the patient's overall physical state (other diseases and
+      conditions) was a significant factor in deciding on the regimen, or in varying
+      the dose or treatment interval.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
     domain_of:
     - SACTResearchView
-    range: string
+    range: YesNoIndicator
     required: false
   date_decision_to_treat:
     name: date_decision_to_treat
@@ -3068,7 +3434,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: DATE
-    description: ''
+    description: The date on which the consultation between the PATIENT and the clinician
+      took place and a Planned Cancer Treatment was agreed.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3085,7 +3452,7 @@ attributes:
       sql_type:
         tag: sql_type
         value: DATE
-    description: ''
+    description: The first administration date of the first cycle of a regimen.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3102,13 +3469,14 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(4)
-    description: ''
+    description: Records whether the patient is currently in an active Systemic Anti-Cancer
+      Therapy trial.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
     domain_of:
     - SACTResearchView
-    range: string
+    range: ClinicalTrialIndicator
     required: false
   cycle_number:
     name: cycle_number
@@ -3119,7 +3487,7 @@ attributes:
       sql_type:
         tag: sql_type
         value: INT
-    description: ''
+    description: Cycle number, numbered sequentially within each regimen.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3136,7 +3504,7 @@ attributes:
       sql_type:
         tag: sql_type
         value: DATE
-    description: ''
+    description: Date of first drug administration in each cycle.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3153,7 +3521,7 @@ attributes:
       sql_type:
         tag: sql_type
         value: FLOAT
-    description: ''
+    description: Weight in kilogrammes at start of the cycle.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3172,13 +3540,14 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(2)
-    description: ''
+    description: WHO performance status at start of the cycle, for patients aged 19
+      years and above.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
     domain_of:
     - SACTResearchView
-    range: string
+    range: PerformanceStatusAdult
     required: false
   drug_name:
     name: drug_name
@@ -3189,7 +3558,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(110)
-    description: ''
+    description: The name of the anti-cancer drug, taken from the British National
+      Formulary.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3209,7 +3579,9 @@ attributes:
       vocabulary:
         tag: vocabulary
         value: NHS Dictionary of Medicines and Devices (dm+d)
-    description: ''
+    description: The unique ID from the dm+d (Dictionary of Medicines and Devices)
+      database, based around the drug name and manufacturer. Pilot item for v3.0,
+      required only for official Pilot sites.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3226,7 +3598,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(100)
-    description: ''
+    description: Dose in mg or other applicable unit for each administration in a
+      SACT cycle.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3243,13 +3616,13 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(16)
-    description: ''
+    description: Units of measurement used for each administration in a SACT cycle.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
     domain_of:
     - SACTResearchView
-    range: string
+    range: AdministrationMeasurementCode
     required: false
   ot_admin_meas_per_actual_dose:
     name: ot_admin_meas_per_actual_dose
@@ -3260,7 +3633,9 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(30)
-    description: ''
+    description: Free-text description of a unit of measurement not available within
+      the coded [admin_meas_per_actual_dose] field. Only populated when code 98 (Other)
+      is selected.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3280,7 +3655,8 @@ attributes:
       vocabulary:
         tag: vocabulary
         value: SNOMED CT / dm+d
-    description: ''
+    description: The SNOMED CT concept ID from the NHS Dictionary of Medicines and
+      Devices identifying the unit of measurement.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3297,13 +3673,14 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(4)
-    description: ''
+    description: The prescribed method of delivery for each administration in a SACT
+      cycle.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
     domain_of:
     - SACTResearchView
-    range: string
+    range: SACTAdministrationRouteCode
     required: false
   route_admin_snomed_ct_dm_d:
     name: route_admin_snomed_ct_dm_d
@@ -3317,7 +3694,8 @@ attributes:
       vocabulary:
         tag: vocabulary
         value: SNOMED CT / dm+d
-    description: ''
+    description: The SNOMED CT concept ID from the NHS Dictionary of Medicines and
+      Devices identifying the route of administration.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3334,7 +3712,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: DATE
-    description: ''
+    description: The date on which the anti-cancer drug was administered to a patient,
+      an infusion commenced, or an oral drug initially dispensed to the patient.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView
@@ -3351,7 +3730,8 @@ attributes:
       sql_type:
         tag: sql_type
         value: NVARCHAR(10)
-    description: ''
+    description: Organisation Identifier of the organisation responsible for each
+      administration in a SACT cycle. Complies with ANANA standard DCB0090.
     from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
     rank: 1000
     owner: SACTResearchView

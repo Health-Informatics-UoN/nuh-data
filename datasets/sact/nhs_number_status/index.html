@@ -383,6 +383,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../AdjunctiveTherapyType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: AdjunctiveTherapyType
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AdministrationMeasurementCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: AdministrationMeasurementCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Boolean/" class="md-nav__link">
         
   
@@ -391,6 +447,34 @@
     
   
     Boolean
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ClinicalTrialIndicator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: ClinicalTrialIndicator
   
 
     
@@ -635,6 +719,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../IntentOfTreatment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: IntentOfTreatment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Jsonpath/" class="md-nav__link">
         
   
@@ -671,6 +783,34 @@
     
   
     Jsonpointer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NHSNumberStatusCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: NHSNumberStatusCode
   
 
     
@@ -755,6 +895,90 @@
     
   
     Objectidentifier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PerformanceStatusAdult/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: PerformanceStatusAdult
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PersonStatedGenderCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: PersonStatedGenderCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SACTAdministrationRouteCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: SACTAdministrationRouteCode
   
 
     
@@ -923,6 +1147,34 @@
     
   
     Uriorcurie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../YesNoIndicator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: YesNoIndicator
   
 
     
@@ -2288,6 +2540,7 @@
 
 
 <h1 id="slot-nhs_number_status">Slot: nhs_number_status</h1>
+<p><em>The NHS NUMBER STATUS INDICATOR CODE indicates the verification status of the NHS number provided.</em></p>
 <div data-search-exclude markdown="1">
 
 
@@ -2316,7 +2569,7 @@ URI: [sact:nhs_number_status](https://health-informatics-uon.github.io/nuh-data/
 
 | Property | Value |
 | --- | --- |
-| Range | [String](String.md) |
+| Range | [NHSNumberStatusCode](NHSNumberStatusCode.md) |
 | Domain Of | [SACTResearchView](SACTResearchView.md) |
 
 ### Cardinality and Requirements
@@ -2377,12 +2630,13 @@ annotations:
   sql_type:
     tag: sql_type
     value: NVARCHAR(4)
-description: ''
+description: The NHS NUMBER STATUS INDICATOR CODE indicates the verification status
+  of the NHS number provided.
 from_schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
 rank: 1000
 domain_of:
 - SACTResearchView
-range: string
+range: NHSNumberStatusCode
 required: false
 
 </code></pre>
