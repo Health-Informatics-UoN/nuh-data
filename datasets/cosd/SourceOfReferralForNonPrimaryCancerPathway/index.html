@@ -46,10 +46,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -62,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -118,7 +122,25 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -237,7 +259,7 @@
   <span class="md-ellipsis">
     
   
-    NUH Data
+    NUH Research Metadata
   
 
     
@@ -2100,6 +2122,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: SourceOfReferralForNonPrimaryCancerPathway
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2116,6 +2156,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permissible-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissible Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -19236,6 +19356,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permissible-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissible Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -19256,68 +19445,131 @@
 
 <h1 id="enum-sourceofreferralfornonprimarycancerpathway">Enum: SourceOfReferralForNonPrimaryCancerPathway<a class="headerlink" href="#enum-sourceofreferralfornonprimarycancerpathway" title="Permanent link">&para;</a></h1>
 <p><em>(Non Primary Cancer Pathway only.) This identifies the source of referral for a non primary cancer pathway.</em></p>
-<div data-search-exclude markdown="1">
-
-URI: [cosd:SourceOfReferralForNonPrimaryCancerPathway](https://health-informatics-uon.github.io/nuh-data/datasets/cosd/SourceOfReferralForNonPrimaryCancerPathway)
-
-## Permissible Values
-| Value | Meaning | Description |
-| --- | --- | --- |
-| 01 | None | following an emergency admission |
-| 02 | None | following a Domiciliary Consultation |
-| 10 | None | following an Emergency Care Attendance (including Minor Injuries, Walk In Cen... |
-| 11 | None | Other (not listed) |
-| 03 | None | referral from a GENERAL MEDICAL PRACTITIONER |
-| 92 | None | referral from a GENERAL DENTAL PRACTITIONER |
-| 12 | None | referral from a General Practitioner with an Extended Role (GPwER) or Dentist... |
-| 04 | None | referral from an Emergency Care Department (including Minor Injuries Units, W... |
-| 05 | None | referral from a CONSULTANT, other than in an Emergency Care Department |
-| 06 | None | self-referral |
-| 07 | None | referral from a Prosthetist |
-| 13 | None | referral from a Specialist NURSE (Secondary Care) |
-| 14 | None | referral from an Allied Health Professional |
-| 15 | None | referral from an OPTOMETRIST |
-| 16 | None | referral from an Orthoptist |
-| 17 | None | referral from a National Screening Programme |
-| 93 | None | referral from a Community Dental Service |
-| 97 | None | referral: Other (not listed) |
-
-
-
-
-## Slots
-
-| Name | Description |
-| ---  | --- |
-| [npp_cr0300_source_of_referral](npp_cr0300_source_of_referral.md) | (Non Primary Cancer Pathway only |
-
-
-
-
-
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://health-informatics-uon.github.io/nuh-data/datasets/cosd
-
-
-
-
-
-
-## LinkML Source
-
+<div>
+<p>URI: <a href="https://health-informatics-uon.github.io/nuh-data/datasets/cosd/SourceOfReferralForNonPrimaryCancerPathway">cosd:SourceOfReferralForNonPrimaryCancerPathway</a></p>
+<h2 id="permissible-values">Permissible Values<a class="headerlink" href="#permissible-values" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>None</td>
+<td>following an emergency admission</td>
+</tr>
+<tr>
+<td>02</td>
+<td>None</td>
+<td>following a Domiciliary Consultation</td>
+</tr>
+<tr>
+<td>10</td>
+<td>None</td>
+<td>following an Emergency Care Attendance (including Minor Injuries, Walk In Cen...</td>
+</tr>
+<tr>
+<td>11</td>
+<td>None</td>
+<td>Other (not listed)</td>
+</tr>
+<tr>
+<td>03</td>
+<td>None</td>
+<td>referral from a GENERAL MEDICAL PRACTITIONER</td>
+</tr>
+<tr>
+<td>92</td>
+<td>None</td>
+<td>referral from a GENERAL DENTAL PRACTITIONER</td>
+</tr>
+<tr>
+<td>12</td>
+<td>None</td>
+<td>referral from a General Practitioner with an Extended Role (GPwER) or Dentist...</td>
+</tr>
+<tr>
+<td>04</td>
+<td>None</td>
+<td>referral from an Emergency Care Department (including Minor Injuries Units, W...</td>
+</tr>
+<tr>
+<td>05</td>
+<td>None</td>
+<td>referral from a CONSULTANT, other than in an Emergency Care Department</td>
+</tr>
+<tr>
+<td>06</td>
+<td>None</td>
+<td>self-referral</td>
+</tr>
+<tr>
+<td>07</td>
+<td>None</td>
+<td>referral from a Prosthetist</td>
+</tr>
+<tr>
+<td>13</td>
+<td>None</td>
+<td>referral from a Specialist NURSE (Secondary Care)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>None</td>
+<td>referral from an Allied Health Professional</td>
+</tr>
+<tr>
+<td>15</td>
+<td>None</td>
+<td>referral from an OPTOMETRIST</td>
+</tr>
+<tr>
+<td>16</td>
+<td>None</td>
+<td>referral from an Orthoptist</td>
+</tr>
+<tr>
+<td>17</td>
+<td>None</td>
+<td>referral from a National Screening Programme</td>
+</tr>
+<tr>
+<td>93</td>
+<td>None</td>
+<td>referral from a Community Dental Service</td>
+</tr>
+<tr>
+<td>97</td>
+<td>None</td>
+<td>referral: Other (not listed)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots<a class="headerlink" href="#slots" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../npp_cr0300_source_of_referral/">npp_cr0300_source_of_referral</a></td>
+<td>(Non Primary Cancer Pathway only</td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permanent link">&para;</a></h2>
+<h3 id="schema-source">Schema Source<a class="headerlink" href="#schema-source" title="Permanent link">&para;</a></h3>
+<ul>
+<li>from schema: https://health-informatics-uon.github.io/nuh-data/datasets/cosd</li>
+</ul>
+<h2 id="linkml-source">LinkML Source<a class="headerlink" href="#linkml-source" title="Permanent link">&para;</a></h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SourceOfReferralForNonPrimaryCancerPathway</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(Non Primary Cancer Pathway only.) This identifies the source of referral</span>
@@ -19384,7 +19636,6 @@ URI: [cosd:SourceOfReferralForNonPrimaryCancerPathway](https://health-informatic
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;referral:</span><span class="nv"> </span><span class="s">Other</span><span class="nv"> </span><span class="s">(not</span><span class="nv"> </span><span class="s">listed)&#39;</span>
 </code></pre></div>
 </details>
-
 </div>
 
 
@@ -19411,6 +19662,18 @@ URI: [cosd:SourceOfReferralForNonPrimaryCancerPathway](https://health-informatic
         
       </main>
       
+  <div class="md-footer-logo">
+    <div class="md-footer-logo__inner md-grid">
+      <a href="https://nottinghambrc.nihr.ac.uk/" target="_blank" rel="noopener">
+        <img
+          src="../../../footer-logo.svg"
+          alt="Nottingham Biomedical Research Centre"
+          class="md-footer-logo__image"
+        >
+      </a>
+    </div>
+  </div>
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -19418,17 +19681,13 @@ URI: [cosd:SourceOfReferralForNonPrimaryCancerPathway](https://health-informatic
       <div class="md-copyright">
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
     </div>
   </div>
 </footer>
       
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>

@@ -46,10 +46,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -62,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -118,7 +122,25 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -237,7 +259,7 @@
   <span class="md-ellipsis">
     
   
-    NUH Data
+    NUH Research Metadata
   
 
     
@@ -1036,6 +1058,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: EthnicCategory
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1052,6 +1092,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permissible-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissible Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -19236,6 +19356,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permissible-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissible Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -19257,68 +19446,131 @@
 <h1 id="enum-ethniccategory">Enum: EthnicCategory<a class="headerlink" href="#enum-ethniccategory" title="Permanent link">&para;</a></h1>
 <p><em>The ethnicity of a PERSON, as specified by the PERSON. The 16+1 ethnic data categories defined in the 2001 census is the national mandatory standard for the collection and analysis of ethnicity.</em></p>
 <p><em>(The Office for National Statistics has developed a further breakdown of the group from that given, which may be used locally.)</em></p>
-<div data-search-exclude markdown="1">
-
-URI: [cosd:EthnicCategory](https://health-informatics-uon.github.io/nuh-data/datasets/cosd/EthnicCategory)
-
-## Permissible Values
-| Value | Meaning | Description |
-| --- | --- | --- |
-| A | None | (White) British |
-| B | None | (White) Irish |
-| C | None | Any other White background |
-| D | None | White and Black Caribbean |
-| E | None | White and Black African |
-| F | None | White and Asian |
-| G | None | Any other mixed background |
-| H | None | Indian |
-| J | None | Pakistani |
-| K | None | Bangladeshi |
-| L | None | Any other Asian background |
-| M | None | Caribbean |
-| N | None | African |
-| P | None | Any other Black background |
-| R | None | Chinese |
-| S | None | Any other ethnic group |
-| Z | None | Not stated |
-| 99 | None | Not Known |
-
-
-
-
-## Slots
-
-| Name | Description |
-| ---  | --- |
-| [cr0150_ethnic_category](cr0150_ethnic_category.md) | The ethnicity of a PERSON, as specified by the PERSON |
-
-
-
-
-
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://health-informatics-uon.github.io/nuh-data/datasets/cosd
-
-
-
-
-
-
-## LinkML Source
-
+<div>
+<p>URI: <a href="https://health-informatics-uon.github.io/nuh-data/datasets/cosd/EthnicCategory">cosd:EthnicCategory</a></p>
+<h2 id="permissible-values">Permissible Values<a class="headerlink" href="#permissible-values" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>None</td>
+<td>(White) British</td>
+</tr>
+<tr>
+<td>B</td>
+<td>None</td>
+<td>(White) Irish</td>
+</tr>
+<tr>
+<td>C</td>
+<td>None</td>
+<td>Any other White background</td>
+</tr>
+<tr>
+<td>D</td>
+<td>None</td>
+<td>White and Black Caribbean</td>
+</tr>
+<tr>
+<td>E</td>
+<td>None</td>
+<td>White and Black African</td>
+</tr>
+<tr>
+<td>F</td>
+<td>None</td>
+<td>White and Asian</td>
+</tr>
+<tr>
+<td>G</td>
+<td>None</td>
+<td>Any other mixed background</td>
+</tr>
+<tr>
+<td>H</td>
+<td>None</td>
+<td>Indian</td>
+</tr>
+<tr>
+<td>J</td>
+<td>None</td>
+<td>Pakistani</td>
+</tr>
+<tr>
+<td>K</td>
+<td>None</td>
+<td>Bangladeshi</td>
+</tr>
+<tr>
+<td>L</td>
+<td>None</td>
+<td>Any other Asian background</td>
+</tr>
+<tr>
+<td>M</td>
+<td>None</td>
+<td>Caribbean</td>
+</tr>
+<tr>
+<td>N</td>
+<td>None</td>
+<td>African</td>
+</tr>
+<tr>
+<td>P</td>
+<td>None</td>
+<td>Any other Black background</td>
+</tr>
+<tr>
+<td>R</td>
+<td>None</td>
+<td>Chinese</td>
+</tr>
+<tr>
+<td>S</td>
+<td>None</td>
+<td>Any other ethnic group</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>None</td>
+<td>Not stated</td>
+</tr>
+<tr>
+<td>99</td>
+<td>None</td>
+<td>Not Known</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots<a class="headerlink" href="#slots" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../cr0150_ethnic_category/">cr0150_ethnic_category</a></td>
+<td>The ethnicity of a PERSON, as specified by the PERSON</td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permanent link">&para;</a></h2>
+<h3 id="schema-source">Schema Source<a class="headerlink" href="#schema-source" title="Permanent link">&para;</a></h3>
+<ul>
+<li>from schema: https://health-informatics-uon.github.io/nuh-data/datasets/cosd</li>
+</ul>
+<h2 id="linkml-source">LinkML Source<a class="headerlink" href="#linkml-source" title="Permanent link">&para;</a></h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EthnicCategory</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">ethnicity</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">PERSON,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">PERSON.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">16+1</span><span class="nv"> </span><span class="s">ethnic</span>
@@ -19386,7 +19638,6 @@ URI: [cosd:EthnicCategory](https://health-informatics-uon.github.io/nuh-data/dat
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Not Known</span>
 </code></pre></div>
 </details>
-
 </div>
 
 
@@ -19413,6 +19664,18 @@ URI: [cosd:EthnicCategory](https://health-informatics-uon.github.io/nuh-data/dat
         
       </main>
       
+  <div class="md-footer-logo">
+    <div class="md-footer-logo__inner md-grid">
+      <a href="https://nottinghambrc.nihr.ac.uk/" target="_blank" rel="noopener">
+        <img
+          src="../../../footer-logo.svg"
+          alt="Nottingham Biomedical Research Centre"
+          class="md-footer-logo__image"
+        >
+      </a>
+    </div>
+  </div>
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -19420,17 +19683,13 @@ URI: [cosd:EthnicCategory](https://health-informatics-uon.github.io/nuh-data/dat
       <div class="md-copyright">
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
     </div>
   </div>
 </footer>
       
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>

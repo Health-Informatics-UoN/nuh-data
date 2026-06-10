@@ -46,10 +46,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -62,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -118,7 +122,25 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -237,7 +259,7 @@
   <span class="md-ellipsis">
     
   
-    NUH Data
+    NUH Research Metadata
   
 
     
@@ -1512,6 +1534,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: MultidisciplinaryTeamMeetingType
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1528,6 +1568,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permissible-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissible Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -19236,6 +19356,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permissible-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissible Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -19257,127 +19446,417 @@
 <h1 id="enum-multidisciplinaryteammeetingtype">Enum: MultidisciplinaryTeamMeetingType<a class="headerlink" href="#enum-multidisciplinaryteammeetingtype" title="Permanent link">&para;</a></h1>
 <p><em>Record the type of MDT meeting at which the patient was discussed. Please provide the most detailed level of information that is possible.</em></p>
 <p><em>Note: the codes at the high level (shown in bold) are Tumour groups and the items below each high-level code are Multidisciplinary Teams. ORGANISATIONS should only use the high-level code if the Multidisciplinary Team is not listed.</em></p>
-<div data-search-exclude markdown="1">
-
-URI: [cosd:MultidisciplinaryTeamMeetingType](https://health-informatics-uon.github.io/nuh-data/datasets/cosd/MultidisciplinaryTeamMeetingType)
-
-## Permissible Values
-| Value | Meaning | Description |
-| --- | --- | --- |
-| 0100 | None | Breast |
-| 0101 | None | Breast MDT |
-| 0102 | None | Metastatic Breast MDT |
-| 0200 | None | Brain/Central Nervous System |
-| 0201 | None | Brain Central Nervous System (CNS)/Neuroscience MDT |
-| 0202 | None | Rehabilitation and Non-Surgical (Network) MDT |
-| 0203 | None | Pituitary MDT |
-| 0204 | None | Skull base MDT |
-| 0205 | None | Spinal cord MDT |
-| 0206 | None | Low grade glioma MDT |
-| 0207 | None | Metastasis to brain MDT |
-| 0208 | None | Stereotactic Radiosurgery (SRS) MDT |
-| 0209 | None | Genetic subtypes MDT |
-| 0300 | None | Colorectal |
-| 0301 | None | Colorectal MDT |
-| 0302 | None | Anal MDT |
-| 0400 | None | CTYA |
-| 0401 | None | Paediatric Combined Diagnostic and Treatment MDT |
-| 0402 | None | Paediatric Haematology only MDT |
-| 0403 | None | Paediatric non-CNS solid tumours only MDT |
-| 0404 | None | Paediatric CNS malignancy only MDT |
-| 0405 | None | Paediatric Late Effects MDT |
-| 0406 | None | Paediatric (POSCU) MDT |
-| 0407 | None | Teenage and Young Adult MDT |
-| 0408 | None | Teenage and Young Adult Late Effects MDT |
-| 0500 | None | Gynaecology |
-| 0501 | None | Gynaecology local MDT |
-| 0502 | None | Gynaecology Specialist MDT |
-| 0600 | None | Haematology |
-| 0601 | None | Haematology MDT |
-| 0602 | None | Lymphoma MDT |
-| 0603 | None | Plasma Cell MDT |
-| 0604 | None | Myeloid MDT |
-| 0605 | None | Bone marrow transplant MDT |
-| 0700 | None | Head and Neck (including Thyroid) |
-| 0701 | None | Upper Aerodigestive Tract (UAT) only MDT |
-| 0702 | None | Upper Aerodigestive Tract (UAT) and Thyroid MDT |
-| 0703 | None | Thyroid Only MDT |
-| 0800 | None | Lung |
-| 0801 | None | Lung MDT |
-| 0802 | None | Mesothelioma Specialist MDT |
-| 0900 | None | Sarcoma |
-| 0901 | None | Bone and Soft tissue MDT |
-| 0902 | None | Bone MDT |
-| 0903 | None | Soft tissue MDT |
-| 1000 | None | Skin |
-| 1001 | None | Skin Local MDT |
-| 1002 | None | Skin Specialist MDT |
-| 1003 | None | Melanoma MDT |
-| 1004 | None | Supra T-Cell Lymphoma MDT |
-| 1100 | None | Upper GI |
-| 1101 | None | Upper GI Local MDT |
-| 1102 | None | Oesophago-Gastric Specialist MDT |
-| 1103 | None | Hepatobiliary and Pancreatic (HPB) Specialist MDT |
-| 1104 | None | Pancreatic/Biliary (PB) Specialist MDT |
-| 1105 | None | Hepatic Specialist MDT |
-| 1200 | None | Urology |
-| 1201 | None | Urology Local MDT |
-| 1202 | None | Urology Specialist MDT |
-| 1203 | None | Testicular Supranetwork MDT |
-| 1204 | None | Penile Supranetwork MDT |
-| 1300 | None | Other |
-| 1301 | None | CUP MDT |
-| 1302 | None | Neuroendocrine MDT |
-| 1303 | None | Palliative Care MDT |
-| 1304 | None | Enhanced Supportive Care MDT |
-| 1305 | None | Stereotactic Radiotherapy (SRT) only (all sites) |
-| 1306 | None | Adrenal MDT |
-
-
-
-
-## Slots
-
-| Name | Description |
-| ---  | --- |
-| [cr3190_mdt_type1](cr3190_mdt_type1.md) | Record the type of MDT meeting at which the patient was discussed |
-| [cr3190_mdt_type2](cr3190_mdt_type2.md) | Record the type of MDT meeting at which the patient was discussed |
-| [cr3190_mdt_type3](cr3190_mdt_type3.md) | Record the type of MDT meeting at which the patient was discussed |
-| [cr3190_mdt_type4](cr3190_mdt_type4.md) | Record the type of MDT meeting at which the patient was discussed |
-| [cr3190_mdt_type5](cr3190_mdt_type5.md) | Record the type of MDT meeting at which the patient was discussed |
-| [cr3190_mdt_type6](cr3190_mdt_type6.md) | Record the type of MDT meeting at which the patient was discussed |
-| [cr3190_mdt_type7](cr3190_mdt_type7.md) | Record the type of MDT meeting at which the patient was discussed |
-| [cr3190_mdt_type8](cr3190_mdt_type8.md) | Record the type of MDT meeting at which the patient was discussed |
-| [cr3190_mdt_type9](cr3190_mdt_type9.md) | Record the type of MDT meeting at which the patient was discussed |
-| [cr3190_mdt_type10](cr3190_mdt_type10.md) | Record the type of MDT meeting at which the patient was discussed |
-
-
-
-
-
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://health-informatics-uon.github.io/nuh-data/datasets/cosd
-
-
-
-
-
-
-## LinkML Source
-
+<div>
+<p>URI: <a href="https://health-informatics-uon.github.io/nuh-data/datasets/cosd/MultidisciplinaryTeamMeetingType">cosd:MultidisciplinaryTeamMeetingType</a></p>
+<h2 id="permissible-values">Permissible Values<a class="headerlink" href="#permissible-values" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0100</td>
+<td>None</td>
+<td>Breast</td>
+</tr>
+<tr>
+<td>0101</td>
+<td>None</td>
+<td>Breast MDT</td>
+</tr>
+<tr>
+<td>0102</td>
+<td>None</td>
+<td>Metastatic Breast MDT</td>
+</tr>
+<tr>
+<td>0200</td>
+<td>None</td>
+<td>Brain/Central Nervous System</td>
+</tr>
+<tr>
+<td>0201</td>
+<td>None</td>
+<td>Brain Central Nervous System (CNS)/Neuroscience MDT</td>
+</tr>
+<tr>
+<td>0202</td>
+<td>None</td>
+<td>Rehabilitation and Non-Surgical (Network) MDT</td>
+</tr>
+<tr>
+<td>0203</td>
+<td>None</td>
+<td>Pituitary MDT</td>
+</tr>
+<tr>
+<td>0204</td>
+<td>None</td>
+<td>Skull base MDT</td>
+</tr>
+<tr>
+<td>0205</td>
+<td>None</td>
+<td>Spinal cord MDT</td>
+</tr>
+<tr>
+<td>0206</td>
+<td>None</td>
+<td>Low grade glioma MDT</td>
+</tr>
+<tr>
+<td>0207</td>
+<td>None</td>
+<td>Metastasis to brain MDT</td>
+</tr>
+<tr>
+<td>0208</td>
+<td>None</td>
+<td>Stereotactic Radiosurgery (SRS) MDT</td>
+</tr>
+<tr>
+<td>0209</td>
+<td>None</td>
+<td>Genetic subtypes MDT</td>
+</tr>
+<tr>
+<td>0300</td>
+<td>None</td>
+<td>Colorectal</td>
+</tr>
+<tr>
+<td>0301</td>
+<td>None</td>
+<td>Colorectal MDT</td>
+</tr>
+<tr>
+<td>0302</td>
+<td>None</td>
+<td>Anal MDT</td>
+</tr>
+<tr>
+<td>0400</td>
+<td>None</td>
+<td>CTYA</td>
+</tr>
+<tr>
+<td>0401</td>
+<td>None</td>
+<td>Paediatric Combined Diagnostic and Treatment MDT</td>
+</tr>
+<tr>
+<td>0402</td>
+<td>None</td>
+<td>Paediatric Haematology only MDT</td>
+</tr>
+<tr>
+<td>0403</td>
+<td>None</td>
+<td>Paediatric non-CNS solid tumours only MDT</td>
+</tr>
+<tr>
+<td>0404</td>
+<td>None</td>
+<td>Paediatric CNS malignancy only MDT</td>
+</tr>
+<tr>
+<td>0405</td>
+<td>None</td>
+<td>Paediatric Late Effects MDT</td>
+</tr>
+<tr>
+<td>0406</td>
+<td>None</td>
+<td>Paediatric (POSCU) MDT</td>
+</tr>
+<tr>
+<td>0407</td>
+<td>None</td>
+<td>Teenage and Young Adult MDT</td>
+</tr>
+<tr>
+<td>0408</td>
+<td>None</td>
+<td>Teenage and Young Adult Late Effects MDT</td>
+</tr>
+<tr>
+<td>0500</td>
+<td>None</td>
+<td>Gynaecology</td>
+</tr>
+<tr>
+<td>0501</td>
+<td>None</td>
+<td>Gynaecology local MDT</td>
+</tr>
+<tr>
+<td>0502</td>
+<td>None</td>
+<td>Gynaecology Specialist MDT</td>
+</tr>
+<tr>
+<td>0600</td>
+<td>None</td>
+<td>Haematology</td>
+</tr>
+<tr>
+<td>0601</td>
+<td>None</td>
+<td>Haematology MDT</td>
+</tr>
+<tr>
+<td>0602</td>
+<td>None</td>
+<td>Lymphoma MDT</td>
+</tr>
+<tr>
+<td>0603</td>
+<td>None</td>
+<td>Plasma Cell MDT</td>
+</tr>
+<tr>
+<td>0604</td>
+<td>None</td>
+<td>Myeloid MDT</td>
+</tr>
+<tr>
+<td>0605</td>
+<td>None</td>
+<td>Bone marrow transplant MDT</td>
+</tr>
+<tr>
+<td>0700</td>
+<td>None</td>
+<td>Head and Neck (including Thyroid)</td>
+</tr>
+<tr>
+<td>0701</td>
+<td>None</td>
+<td>Upper Aerodigestive Tract (UAT) only MDT</td>
+</tr>
+<tr>
+<td>0702</td>
+<td>None</td>
+<td>Upper Aerodigestive Tract (UAT) and Thyroid MDT</td>
+</tr>
+<tr>
+<td>0703</td>
+<td>None</td>
+<td>Thyroid Only MDT</td>
+</tr>
+<tr>
+<td>0800</td>
+<td>None</td>
+<td>Lung</td>
+</tr>
+<tr>
+<td>0801</td>
+<td>None</td>
+<td>Lung MDT</td>
+</tr>
+<tr>
+<td>0802</td>
+<td>None</td>
+<td>Mesothelioma Specialist MDT</td>
+</tr>
+<tr>
+<td>0900</td>
+<td>None</td>
+<td>Sarcoma</td>
+</tr>
+<tr>
+<td>0901</td>
+<td>None</td>
+<td>Bone and Soft tissue MDT</td>
+</tr>
+<tr>
+<td>0902</td>
+<td>None</td>
+<td>Bone MDT</td>
+</tr>
+<tr>
+<td>0903</td>
+<td>None</td>
+<td>Soft tissue MDT</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>None</td>
+<td>Skin</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>None</td>
+<td>Skin Local MDT</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>None</td>
+<td>Skin Specialist MDT</td>
+</tr>
+<tr>
+<td>1003</td>
+<td>None</td>
+<td>Melanoma MDT</td>
+</tr>
+<tr>
+<td>1004</td>
+<td>None</td>
+<td>Supra T-Cell Lymphoma MDT</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>None</td>
+<td>Upper GI</td>
+</tr>
+<tr>
+<td>1101</td>
+<td>None</td>
+<td>Upper GI Local MDT</td>
+</tr>
+<tr>
+<td>1102</td>
+<td>None</td>
+<td>Oesophago-Gastric Specialist MDT</td>
+</tr>
+<tr>
+<td>1103</td>
+<td>None</td>
+<td>Hepatobiliary and Pancreatic (HPB) Specialist MDT</td>
+</tr>
+<tr>
+<td>1104</td>
+<td>None</td>
+<td>Pancreatic/Biliary (PB) Specialist MDT</td>
+</tr>
+<tr>
+<td>1105</td>
+<td>None</td>
+<td>Hepatic Specialist MDT</td>
+</tr>
+<tr>
+<td>1200</td>
+<td>None</td>
+<td>Urology</td>
+</tr>
+<tr>
+<td>1201</td>
+<td>None</td>
+<td>Urology Local MDT</td>
+</tr>
+<tr>
+<td>1202</td>
+<td>None</td>
+<td>Urology Specialist MDT</td>
+</tr>
+<tr>
+<td>1203</td>
+<td>None</td>
+<td>Testicular Supranetwork MDT</td>
+</tr>
+<tr>
+<td>1204</td>
+<td>None</td>
+<td>Penile Supranetwork MDT</td>
+</tr>
+<tr>
+<td>1300</td>
+<td>None</td>
+<td>Other</td>
+</tr>
+<tr>
+<td>1301</td>
+<td>None</td>
+<td>CUP MDT</td>
+</tr>
+<tr>
+<td>1302</td>
+<td>None</td>
+<td>Neuroendocrine MDT</td>
+</tr>
+<tr>
+<td>1303</td>
+<td>None</td>
+<td>Palliative Care MDT</td>
+</tr>
+<tr>
+<td>1304</td>
+<td>None</td>
+<td>Enhanced Supportive Care MDT</td>
+</tr>
+<tr>
+<td>1305</td>
+<td>None</td>
+<td>Stereotactic Radiotherapy (SRT) only (all sites)</td>
+</tr>
+<tr>
+<td>1306</td>
+<td>None</td>
+<td>Adrenal MDT</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots<a class="headerlink" href="#slots" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../cr3190_mdt_type1/">cr3190_mdt_type1</a></td>
+<td>Record the type of MDT meeting at which the patient was discussed</td>
+</tr>
+<tr>
+<td><a href="../cr3190_mdt_type2/">cr3190_mdt_type2</a></td>
+<td>Record the type of MDT meeting at which the patient was discussed</td>
+</tr>
+<tr>
+<td><a href="../cr3190_mdt_type3/">cr3190_mdt_type3</a></td>
+<td>Record the type of MDT meeting at which the patient was discussed</td>
+</tr>
+<tr>
+<td><a href="../cr3190_mdt_type4/">cr3190_mdt_type4</a></td>
+<td>Record the type of MDT meeting at which the patient was discussed</td>
+</tr>
+<tr>
+<td><a href="../cr3190_mdt_type5/">cr3190_mdt_type5</a></td>
+<td>Record the type of MDT meeting at which the patient was discussed</td>
+</tr>
+<tr>
+<td><a href="../cr3190_mdt_type6/">cr3190_mdt_type6</a></td>
+<td>Record the type of MDT meeting at which the patient was discussed</td>
+</tr>
+<tr>
+<td><a href="../cr3190_mdt_type7/">cr3190_mdt_type7</a></td>
+<td>Record the type of MDT meeting at which the patient was discussed</td>
+</tr>
+<tr>
+<td><a href="../cr3190_mdt_type8/">cr3190_mdt_type8</a></td>
+<td>Record the type of MDT meeting at which the patient was discussed</td>
+</tr>
+<tr>
+<td><a href="../cr3190_mdt_type9/">cr3190_mdt_type9</a></td>
+<td>Record the type of MDT meeting at which the patient was discussed</td>
+</tr>
+<tr>
+<td><a href="../cr3190_mdt_type10/">cr3190_mdt_type10</a></td>
+<td>Record the type of MDT meeting at which the patient was discussed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permanent link">&para;</a></h2>
+<h3 id="schema-source">Schema Source<a class="headerlink" href="#schema-source" title="Permanent link">&para;</a></h3>
+<ul>
+<li>from schema: https://health-informatics-uon.github.io/nuh-data/datasets/cosd</li>
+</ul>
+<h2 id="linkml-source">LinkML Source<a class="headerlink" href="#linkml-source" title="Permanent link">&para;</a></h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MultidisciplinaryTeamMeetingType</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Record</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">MDT</span><span class="nv"> </span><span class="s">meeting</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">patient</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">discussed.</span><span class="nv"> </span><span class="s">Please</span>
@@ -19595,7 +20074,6 @@ URI: [cosd:MultidisciplinaryTeamMeetingType](https://health-informatics-uon.gith
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Adrenal MDT</span>
 </code></pre></div>
 </details>
-
 </div>
 
 
@@ -19622,6 +20100,18 @@ URI: [cosd:MultidisciplinaryTeamMeetingType](https://health-informatics-uon.gith
         
       </main>
       
+  <div class="md-footer-logo">
+    <div class="md-footer-logo__inner md-grid">
+      <a href="https://nottinghambrc.nihr.ac.uk/" target="_blank" rel="noopener">
+        <img
+          src="../../../footer-logo.svg"
+          alt="Nottingham Biomedical Research Centre"
+          class="md-footer-logo__image"
+        >
+      </a>
+    </div>
+  </div>
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -19629,17 +20119,13 @@ URI: [cosd:MultidisciplinaryTeamMeetingType](https://health-informatics-uon.gith
       <div class="md-copyright">
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
     </div>
   </div>
 </footer>
       
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>

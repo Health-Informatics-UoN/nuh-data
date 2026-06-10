@@ -46,10 +46,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -62,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -118,7 +122,25 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -237,7 +259,7 @@
   <span class="md-ellipsis">
     
   
-    NUH Data
+    NUH Research Metadata
   
 
     
@@ -1792,6 +1814,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: PersonSexualOrientationCodeAtDiagnosis
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1808,6 +1848,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permissible-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissible Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -19236,6 +19356,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permissible-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissible Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -19257,57 +19446,76 @@
 <h1 id="enum-personsexualorientationcodeatdiagnosis">Enum: PersonSexualOrientationCodeAtDiagnosis<a class="headerlink" href="#enum-personsexualorientationcodeatdiagnosis" title="Permanent link">&para;</a></h1>
 <p><em>Person's sexual orientation as self-declared at the time of the PATIENT DIAGNOSIS.</em></p>
 <p><em>This complies with the information standard DCB2094.</em></p>
-<div data-search-exclude markdown="1">
-
-URI: [cosd:PersonSexualOrientationCodeAtDiagnosis](https://health-informatics-uon.github.io/nuh-data/datasets/cosd/PersonSexualOrientationCodeAtDiagnosis)
-
-## Permissible Values
-| Value | Meaning | Description |
-| --- | --- | --- |
-| 1 | None | Heterosexual or Straight |
-| 2 | None | Gay or Lesbian |
-| 3 | None | Bisexual |
-| 4 | None | Other sexual orientation not listed |
-| U | None | PERSON asked and does not know or is not sure |
-| Z | None | Not Stated (PERSON asked but declined to provide a response) |
-| 9 | None | Not Known (Not Recorded) |
-
-
-
-
-## Slots
-
-| Name | Description |
-| ---  | --- |
-| [cr6840_person_sexual_orientation_code_at_diagnosis](cr6840_person_sexual_orientation_code_at_diagnosis.md) | Person's sexual orientation as self-declared at the time of the PATIENT DIAGN... |
-
-
-
-
-
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://health-informatics-uon.github.io/nuh-data/datasets/cosd
-
-
-
-
-
-
-## LinkML Source
-
+<div>
+<p>URI: <a href="https://health-informatics-uon.github.io/nuh-data/datasets/cosd/PersonSexualOrientationCodeAtDiagnosis">cosd:PersonSexualOrientationCodeAtDiagnosis</a></p>
+<h2 id="permissible-values">Permissible Values<a class="headerlink" href="#permissible-values" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>None</td>
+<td>Heterosexual or Straight</td>
+</tr>
+<tr>
+<td>2</td>
+<td>None</td>
+<td>Gay or Lesbian</td>
+</tr>
+<tr>
+<td>3</td>
+<td>None</td>
+<td>Bisexual</td>
+</tr>
+<tr>
+<td>4</td>
+<td>None</td>
+<td>Other sexual orientation not listed</td>
+</tr>
+<tr>
+<td>U</td>
+<td>None</td>
+<td>PERSON asked and does not know or is not sure</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>None</td>
+<td>Not Stated (PERSON asked but declined to provide a response)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>None</td>
+<td>Not Known (Not Recorded)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots<a class="headerlink" href="#slots" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../cr6840_person_sexual_orientation_code_at_diagnosis/">cr6840_person_sexual_orientation_code_at_diagnosis</a></td>
+<td>Person's sexual orientation as self-declared at the time of the PATIENT DIAGN...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permanent link">&para;</a></h2>
+<h3 id="schema-source">Schema Source<a class="headerlink" href="#schema-source" title="Permanent link">&para;</a></h3>
+<ul>
+<li>from schema: https://health-informatics-uon.github.io/nuh-data/datasets/cosd</li>
+</ul>
+<h2 id="linkml-source">LinkML Source<a class="headerlink" href="#linkml-source" title="Permanent link">&para;</a></h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersonSexualOrientationCodeAtDiagnosis</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Person</span><span class="se">&#39;&#39;</span><span class="s">s</span><span class="nv"> </span><span class="s">sexual</span><span class="nv"> </span><span class="s">orientation</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">self-declared</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">PATIENT</span>
@@ -19340,7 +19548,6 @@ URI: [cosd:PersonSexualOrientationCodeAtDiagnosis](https://health-informatics-uo
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Not Known (Not Recorded)</span>
 </code></pre></div>
 </details>
-
 </div>
 
 
@@ -19367,6 +19574,18 @@ URI: [cosd:PersonSexualOrientationCodeAtDiagnosis](https://health-informatics-uo
         
       </main>
       
+  <div class="md-footer-logo">
+    <div class="md-footer-logo__inner md-grid">
+      <a href="https://nottinghambrc.nihr.ac.uk/" target="_blank" rel="noopener">
+        <img
+          src="../../../footer-logo.svg"
+          alt="Nottingham Biomedical Research Centre"
+          class="md-footer-logo__image"
+        >
+      </a>
+    </div>
+  </div>
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -19374,17 +19593,13 @@ URI: [cosd:PersonSexualOrientationCodeAtDiagnosis](https://health-informatics-uo
       <div class="md-copyright">
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
     </div>
   </div>
 </footer>
       
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>

@@ -44,10 +44,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -60,10 +62,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nuh-data" class="md-skip">
+        <a href="#nuh-research-metadata" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              NUH Data
+              NUH Research Metadata
             
           </span>
         </div>
@@ -116,7 +120,25 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -244,7 +266,7 @@
   <span class="md-ellipsis">
     
   
-    NUH Data
+    NUH Research Metadata
   
 
     
@@ -262,7 +284,7 @@
   <span class="md-ellipsis">
     
   
-    NUH Data
+    NUH Research Metadata
   
 
     
@@ -19393,9 +19415,9 @@
   
 
 
-<h1 id="nuh-data">NUH Data<a class="headerlink" href="#nuh-data" title="Permanent link">&para;</a></h1>
-<p>Research datasets from <strong>Nottingham University Hospitals NHS Trust (NUH)</strong>, one of the largest acute NHS trusts in England, serving a population of approximately 2.5 million across Nottinghamshire and surrounding counties.</p>
-<p>All datasets are pseudonymised research views. Access is subject to a formal data access request.</p>
+<h1 id="nuh-research-metadata">NUH Research Metadata<a class="headerlink" href="#nuh-research-metadata" title="Permanent link">&para;</a></h1>
+<p>This site is the <strong>data dictionary and metadata reference</strong> for research datasets from <strong>Nottingham University Hospitals NHS Trust (NUH)</strong>, one of the largest acute NHS trusts in England, serving a population of approximately 2.5 million across Nottinghamshire and surrounding counties.</p>
+<p>The pages here describe each dataset's structure: its fields, data types, permitted values, and coding standards. All datasets are pseudonymised research views; access to the data requires a formal data access request.</p>
 <hr />
 <h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h2>
 <h3 id="systemic-anti-cancer-therapy-sact"><a href="datasets/sact/">Systemic Anti-Cancer Therapy (SACT)</a><a class="headerlink" href="#systemic-anti-cancer-therapy-sact" title="Permanent link">&para;</a></h3>
@@ -19403,11 +19425,120 @@
 <p><strong>2009–present · Quarterly</strong></p>
 </blockquote>
 <p>Patient-level records of systemic anti-cancer treatments (chemotherapy, targeted therapies, immunotherapy, and other drug-based cancer treatments) administered.</p>
+<p><strong>What it contains:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Patient</td>
+<td>Pseudonymised NHS number, year and month of birth, gender, Lower Layer Super Output Area (LLSOA)</td>
+</tr>
+<tr>
+<td>Diagnosis</td>
+<td>Primary ICD diagnosis, ICD-O morphology, SNOMED CT diagnosis code</td>
+</tr>
+<tr>
+<td>Regimen</td>
+<td>Treatment regimen acronym, intent (curative/palliative/adjuvant), adjunctive therapy type, co-morbidity adjustment, clinical trial flag</td>
+</tr>
+<tr>
+<td>Cycle</td>
+<td>Cycle number, start date, weight, WHO performance status</td>
+</tr>
+<tr>
+<td>Drug administration</td>
+<td>Drug name (BNF), dm+d code, dose, unit of measurement, route of administration (coded and SNOMED CT), administration date, administering organisation</td>
+</tr>
+<tr>
+<td>Outcomes</td>
+<td>Dose reduction, regimen completion (curative), reason not completed, non-curative benefit, toxicity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coding standards:</strong> ICD-10, ICD-O-3, SNOMED CT, NHS dm+d</p>
+<hr />
 <h3 id="cancer-outcomes-and-services-dataset-cosd"><a href="datasets/cosd/">Cancer Outcomes and Services Dataset (COSD)</a><a class="headerlink" href="#cancer-outcomes-and-services-dataset-cosd" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>Full cancer pathway · Nottinghamshire</strong></p>
 </blockquote>
 <p>Patient-level records spanning the cancer care pathway at NUH.</p>
+<p><strong>What it contains:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Patient</td>
+<td>Pseudonymised NHS number and unique record ID, year and month of birth, gender, sexual orientation, ethnicity, GP practice, LLSOA</td>
+</tr>
+<tr>
+<td>Referral and first seen</td>
+<td>Source of referral, dates of first outpatient appointment and first cancer specialist review, organisation identifiers</td>
+</tr>
+<tr>
+<td>Diagnosis</td>
+<td>Primary ICD-10 diagnosis, ICD-O-3 morphology and topography, SNOMED CT diagnosis code, basis of diagnosis, tumour laterality, grade of differentiation, Ki-67, performance status</td>
+</tr>
+<tr>
+<td>Non-primary pathway</td>
+<td>Date of recurrence/relapse, original ICD-10 diagnosis, metastatic type and site (recurrence and progression), method of relapse detection, transformation morphology</td>
+</tr>
+<tr>
+<td>Staging</td>
+<td>Pre-treatment and integrated TNM stage (T/N/M categories and overall grouping), TNM edition and version, site-specific staging, staging organisation and date</td>
+</tr>
+<tr>
+<td>Diagnostic procedures</td>
+<td>Up to 3 procedures: OPCS-4 and SNOMED CT procedure codes, sentinel node biopsy outcome, organisation, date</td>
+</tr>
+<tr>
+<td>Pathology</td>
+<td>Secondary diagnoses, familial cancer syndrome, functional syndrome classification, metastatic type and site at diagnosis</td>
+</tr>
+<tr>
+<td>Treatment</td>
+<td>Up to 4 treatment episodes: modality, intent, adjunctive therapy, start and end dates, surgical procedures (OPCS-4 and SNOMED CT), surgeon identifiers, ASA score, surgical access, discharge destination</td>
+</tr>
+<tr>
+<td>Observations</td>
+<td>Height, weight, and BMI (up to 2 occasions)</td>
+</tr>
+<tr>
+<td>Lifestyle</td>
+<td>Tobacco smoking status and cessation, alcohol history, diabetes, menopausal status, physical activity</td>
+</tr>
+<tr>
+<td>Holistic needs assessment</td>
+<td>Assessment offered, care plan status and date, point of pathway, staff role (up to 2 assessments)</td>
+</tr>
+<tr>
+<td>MDT</td>
+<td>MDT discussion date, cancer care plan intent, planned treatment types, reason for no treatment; up to 10 MDT meetings with type and date</td>
+</tr>
+<tr>
+<td>Acute oncology</td>
+<td>Up to 3 acute oncology assessments: date, location, patient type, outcome</td>
+</tr>
+<tr>
+<td>Laboratory results</td>
+<td>LDH, beta-hCG, and AFP values (up to 3 occasions)</td>
+</tr>
+<tr>
+<td>Imaging</td>
+<td>Up to 10 imaging episodes: NICIP and SNOMED CT codes, modality, anatomical site, laterality, outcome, report text</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coding standards:</strong> ICD-10, ICD-O-3, SNOMED CT, OPCS-4, NICIP</p>
 <hr />
 <h2 id="geographic-and-temporal-coverage">Geographic and Temporal Coverage<a class="headerlink" href="#geographic-and-temporal-coverage" title="Permanent link">&para;</a></h2>
 <table>
@@ -19459,6 +19590,18 @@
         
       </main>
       
+  <div class="md-footer-logo">
+    <div class="md-footer-logo__inner md-grid">
+      <a href="https://nottinghambrc.nihr.ac.uk/" target="_blank" rel="noopener">
+        <img
+          src="./footer-logo.svg"
+          alt="Nottingham Biomedical Research Centre"
+          class="md-footer-logo__image"
+        >
+      </a>
+    </div>
+  </div>
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -19466,17 +19609,13 @@
       <div class="md-copyright">
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
     </div>
   </div>
 </footer>
       
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>

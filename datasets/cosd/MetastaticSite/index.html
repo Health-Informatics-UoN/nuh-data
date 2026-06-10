@@ -46,10 +46,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -62,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -118,7 +122,25 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -237,7 +259,7 @@
   <span class="md-ellipsis">
     
   
-    NUH Data
+    NUH Research Metadata
   
 
     
@@ -1400,6 +1422,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enum: MetastaticSite
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1416,6 +1456,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permissible-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissible Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -19236,6 +19356,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permissible-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissible Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -19257,76 +19446,156 @@
 <h1 id="enum-metastaticsite">Enum: MetastaticSite<a class="headerlink" href="#enum-metastaticsite" title="Permanent link">&para;</a></h1>
 <p><em>The site of the metastatic disease, if any</em></p>
 <p><em>More than one site can be recorded</em></p>
-<div data-search-exclude markdown="1">
-
-URI: [cosd:MetastaticSite](https://health-informatics-uon.github.io/nuh-data/datasets/cosd/MetastaticSite)
-
-## Permissible Values
-| Value | Meaning | Description |
-| --- | --- | --- |
-| 02 | None | Brain |
-| 03 | None | Liver |
-| 04 | None | Lung |
-| 07 | None | Unknown metastatic site |
-| 08 | None | Skin |
-| 09 | None | Distant lymph nodes |
-| 10 | None | Bone (excluding Bone Marrow) |
-| 11 | None | Bone marrow |
-| 12 | None | Regional lymph nodes |
-| 97 | None | Not Applicable |
-| 98 | None | Other metastatic site |
-
-
-
-
-## Slots
-
-| Name | Description |
-| ---  | --- |
-| [npp_cr1590_rec1_metastatic_site1](npp_cr1590_rec1_metastatic_site1.md) | The site of the metastatic disease, if any |
-| [npp_cr1590_rec1_metastatic_site2](npp_cr1590_rec1_metastatic_site2.md) | The site of the metastatic disease, if any |
-| [npp_cr1590_prog_metastatic_site_progression1](npp_cr1590_prog_metastatic_site_progression1.md) | The site of the metastatic disease, if any |
-| [npp_cr1590_prog_metastatic_site_progression2](npp_cr1590_prog_metastatic_site_progression2.md) | The site of the metastatic disease, if any |
-| [pp_cr6970_diag_metastatic_site_1](pp_cr6970_diag_metastatic_site_1.md) | The site of the metastatic disease, if any, at diagnosis |
-| [pp_cr6970_diag_metastatic_site_2](pp_cr6970_diag_metastatic_site_2.md) | The site of the metastatic disease, if any, at diagnosis |
-| [pp_cr6970_diag_metastatic_site_3](pp_cr6970_diag_metastatic_site_3.md) | The site of the metastatic disease, if any, at diagnosis |
-| [pp_cr6970_diag_metastatic_site_4](pp_cr6970_diag_metastatic_site_4.md) | The site of the metastatic disease, if any, at diagnosis |
-| [pp_cr6970_prog1_metastatic_site1](pp_cr6970_prog1_metastatic_site1.md) | The site of the metastatic disease, if any, at diagnosis |
-| [pp_cr6970_prog1_metastatic_site2](pp_cr6970_prog1_metastatic_site2.md) | The site of the metastatic disease, if any, at diagnosis |
-| [pp_cr6970_prog1_metastatic_site3](pp_cr6970_prog1_metastatic_site3.md) | The site of the metastatic disease, if any, at diagnosis |
-| [pp_cr6970_prog1_metastatic_site4](pp_cr6970_prog1_metastatic_site4.md) | The site of the metastatic disease, if any, at diagnosis |
-| [pp_cr6970_prog2_metastatic_site1](pp_cr6970_prog2_metastatic_site1.md) | The site of the metastatic disease, if any, at diagnosis |
-| [pp_cr6970_prog2_metastatic_site2](pp_cr6970_prog2_metastatic_site2.md) | The site of the metastatic disease, if any, at diagnosis |
-| [pp_cr6970_prog2_metastatic_site3](pp_cr6970_prog2_metastatic_site3.md) | The site of the metastatic disease, if any, at diagnosis |
-| [pp_cr6970_prog2_metastatic_site4](pp_cr6970_prog2_metastatic_site4.md) | The site of the metastatic disease, if any, at diagnosis |
-
-
-
-
-
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://health-informatics-uon.github.io/nuh-data/datasets/cosd
-
-
-
-
-
-
-## LinkML Source
-
+<div>
+<p>URI: <a href="https://health-informatics-uon.github.io/nuh-data/datasets/cosd/MetastaticSite">cosd:MetastaticSite</a></p>
+<h2 id="permissible-values">Permissible Values<a class="headerlink" href="#permissible-values" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02</td>
+<td>None</td>
+<td>Brain</td>
+</tr>
+<tr>
+<td>03</td>
+<td>None</td>
+<td>Liver</td>
+</tr>
+<tr>
+<td>04</td>
+<td>None</td>
+<td>Lung</td>
+</tr>
+<tr>
+<td>07</td>
+<td>None</td>
+<td>Unknown metastatic site</td>
+</tr>
+<tr>
+<td>08</td>
+<td>None</td>
+<td>Skin</td>
+</tr>
+<tr>
+<td>09</td>
+<td>None</td>
+<td>Distant lymph nodes</td>
+</tr>
+<tr>
+<td>10</td>
+<td>None</td>
+<td>Bone (excluding Bone Marrow)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>None</td>
+<td>Bone marrow</td>
+</tr>
+<tr>
+<td>12</td>
+<td>None</td>
+<td>Regional lymph nodes</td>
+</tr>
+<tr>
+<td>97</td>
+<td>None</td>
+<td>Not Applicable</td>
+</tr>
+<tr>
+<td>98</td>
+<td>None</td>
+<td>Other metastatic site</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots<a class="headerlink" href="#slots" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../npp_cr1590_rec1_metastatic_site1/">npp_cr1590_rec1_metastatic_site1</a></td>
+<td>The site of the metastatic disease, if any</td>
+</tr>
+<tr>
+<td><a href="../npp_cr1590_rec1_metastatic_site2/">npp_cr1590_rec1_metastatic_site2</a></td>
+<td>The site of the metastatic disease, if any</td>
+</tr>
+<tr>
+<td><a href="../npp_cr1590_prog_metastatic_site_progression1/">npp_cr1590_prog_metastatic_site_progression1</a></td>
+<td>The site of the metastatic disease, if any</td>
+</tr>
+<tr>
+<td><a href="../npp_cr1590_prog_metastatic_site_progression2/">npp_cr1590_prog_metastatic_site_progression2</a></td>
+<td>The site of the metastatic disease, if any</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_diag_metastatic_site_1/">pp_cr6970_diag_metastatic_site_1</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_diag_metastatic_site_2/">pp_cr6970_diag_metastatic_site_2</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_diag_metastatic_site_3/">pp_cr6970_diag_metastatic_site_3</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_diag_metastatic_site_4/">pp_cr6970_diag_metastatic_site_4</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_prog1_metastatic_site1/">pp_cr6970_prog1_metastatic_site1</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_prog1_metastatic_site2/">pp_cr6970_prog1_metastatic_site2</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_prog1_metastatic_site3/">pp_cr6970_prog1_metastatic_site3</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_prog1_metastatic_site4/">pp_cr6970_prog1_metastatic_site4</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_prog2_metastatic_site1/">pp_cr6970_prog2_metastatic_site1</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_prog2_metastatic_site2/">pp_cr6970_prog2_metastatic_site2</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_prog2_metastatic_site3/">pp_cr6970_prog2_metastatic_site3</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+<tr>
+<td><a href="../pp_cr6970_prog2_metastatic_site4/">pp_cr6970_prog2_metastatic_site4</a></td>
+<td>The site of the metastatic disease, if any, at diagnosis</td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permanent link">&para;</a></h2>
+<h3 id="schema-source">Schema Source<a class="headerlink" href="#schema-source" title="Permanent link">&para;</a></h3>
+<ul>
+<li>from schema: https://health-informatics-uon.github.io/nuh-data/datasets/cosd</li>
+</ul>
+<h2 id="linkml-source">LinkML Source<a class="headerlink" href="#linkml-source" title="Permanent link">&para;</a></h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MetastaticSite</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">site</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">metastatic</span><span class="nv"> </span><span class="s">disease,</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">any</span>
@@ -19370,7 +19639,6 @@ URI: [cosd:MetastaticSite](https://health-informatics-uon.github.io/nuh-data/dat
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Other metastatic site</span>
 </code></pre></div>
 </details>
-
 </div>
 
 
@@ -19397,6 +19665,18 @@ URI: [cosd:MetastaticSite](https://health-informatics-uon.github.io/nuh-data/dat
         
       </main>
       
+  <div class="md-footer-logo">
+    <div class="md-footer-logo__inner md-grid">
+      <a href="https://nottinghambrc.nihr.ac.uk/" target="_blank" rel="noopener">
+        <img
+          src="../../../footer-logo.svg"
+          alt="Nottingham Biomedical Research Centre"
+          class="md-footer-logo__image"
+        >
+      </a>
+    </div>
+  </div>
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -19404,17 +19684,13 @@ URI: [cosd:MetastaticSite](https://health-informatics-uon.github.io/nuh-data/dat
       <div class="md-copyright">
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
     </div>
   </div>
 </footer>
       
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>

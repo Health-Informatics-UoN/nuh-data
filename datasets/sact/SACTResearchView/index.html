@@ -46,10 +46,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -62,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -118,7 +122,25 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -237,7 +259,7 @@
   <span class="md-ellipsis">
     
   
-    NUH Data
+    NUH Research Metadata
   
 
     
@@ -17723,6 +17745,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Class: SACTResearchView
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -17739,6 +17779,125 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mappings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LinkML Source">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direct
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#induced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Induced
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -19236,6 +19395,114 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mappings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LinkML Source
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LinkML Source">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direct
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#induced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Induced
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -19256,19 +19523,11 @@
 
 <h1 id="class-sactresearchview">Class: SACTResearchView<a class="headerlink" href="#class-sactresearchview" title="Permanent link">&para;</a></h1>
 <p><em>Flat research view combining patient, regimen, cycle, and drug administration data. Corresponds to RVW.SACT_RESEARCH_VIEW in the source database. Each row represents a single drug administration event, with regimen and patient context repeated per row.</em></p>
-<div data-search-exclude markdown="1">
-
-
-
-URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/datasets/sact/SACTResearchView)
-
-
-
-
-
-<div class="highlight"><pre><span></span><code> classDiagram
+<div>
+<p>URI: <a href="https://health-informatics-uon.github.io/nuh-data/datasets/sact/SACTResearchView">sact:SACTResearchView</a></p>
+<pre class="mermaid"><code> classDiagram
     class SACTResearchView
-    click SACTResearchView href &quot;../SACTResearchView/&quot;
+    click SACTResearchView href "../SACTResearchView/"
       SACTResearchView : actual_dose_per_admin
 
       SACTResearchView : adjunctive_therapy
@@ -19277,8 +19536,8 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
 
 
-        SACTResearchView --&gt; &quot;0..1&quot; AdjunctiveTherapyType : adjunctive_therapy
-        click AdjunctiveTherapyType href &quot;../AdjunctiveTherapyType/&quot;
+        SACTResearchView --&gt; "0..1" AdjunctiveTherapyType : adjunctive_therapy
+        click AdjunctiveTherapyType href "../AdjunctiveTherapyType/"
 
 
 
@@ -19288,8 +19547,8 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
 
 
-        SACTResearchView --&gt; &quot;0..1&quot; AdministrationMeasurementCode : admin_meas_per_actual_dose
-        click AdministrationMeasurementCode href &quot;../AdministrationMeasurementCode/&quot;
+        SACTResearchView --&gt; "0..1" AdministrationMeasurementCode : admin_meas_per_actual_dose
+        click AdministrationMeasurementCode href "../AdministrationMeasurementCode/"
 
 
 
@@ -19301,8 +19560,8 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
 
 
-        SACTResearchView --&gt; &quot;0..1&quot; ClinicalTrialIndicator : clinical_trial
-        click ClinicalTrialIndicator href &quot;../ClinicalTrialIndicator/&quot;
+        SACTResearchView --&gt; "0..1" ClinicalTrialIndicator : clinical_trial
+        click ClinicalTrialIndicator href "../ClinicalTrialIndicator/"
 
 
 
@@ -19312,8 +19571,8 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
 
 
-        SACTResearchView --&gt; &quot;0..1&quot; YesNoIndicator : co_morbidity_adjustment
-        click YesNoIndicator href &quot;../YesNoIndicator/&quot;
+        SACTResearchView --&gt; "0..1" YesNoIndicator : co_morbidity_adjustment
+        click YesNoIndicator href "../YesNoIndicator/"
 
 
 
@@ -19359,8 +19618,8 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
 
 
-        SACTResearchView --&gt; &quot;0..1&quot; IntentOfTreatment : intent_of_treatment
-        click IntentOfTreatment href &quot;../IntentOfTreatment/&quot;
+        SACTResearchView --&gt; "0..1" IntentOfTreatment : intent_of_treatment
+        click IntentOfTreatment href "../IntentOfTreatment/"
 
 
 
@@ -19376,8 +19635,8 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
 
 
-        SACTResearchView --&gt; &quot;0..1&quot; NHSNumberStatusCode : nhs_number_status
-        click NHSNumberStatusCode href &quot;../NHSNumberStatusCode/&quot;
+        SACTResearchView --&gt; "0..1" NHSNumberStatusCode : nhs_number_status
+        click NHSNumberStatusCode href "../NHSNumberStatusCode/"
 
 
 
@@ -19393,8 +19652,8 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
 
 
-        SACTResearchView --&gt; &quot;0..1&quot; PerformanceStatusAdult : perf_stat_start_cycle_ad
-        click PerformanceStatusAdult href &quot;../PerformanceStatusAdult/&quot;
+        SACTResearchView --&gt; "0..1" PerformanceStatusAdult : perf_stat_start_cycle_ad
+        click PerformanceStatusAdult href "../PerformanceStatusAdult/"
 
 
 
@@ -19404,8 +19663,8 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
 
 
-        SACTResearchView --&gt; &quot;0..1&quot; PerformanceStatusAdult : perf_status_start_reg_ad
-        click PerformanceStatusAdult href &quot;../PerformanceStatusAdult/&quot;
+        SACTResearchView --&gt; "0..1" PerformanceStatusAdult : perf_status_start_reg_ad
+        click PerformanceStatusAdult href "../PerformanceStatusAdult/"
 
 
 
@@ -19415,8 +19674,8 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
 
 
-        SACTResearchView --&gt; &quot;0..1&quot; PersonStatedGenderCode : person_stated_gender_code
-        click PersonStatedGenderCode href &quot;../PersonStatedGenderCode/&quot;
+        SACTResearchView --&gt; "0..1" PersonStatedGenderCode : person_stated_gender_code
+        click PersonStatedGenderCode href "../PersonStatedGenderCode/"
 
 
 
@@ -19434,8 +19693,8 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 
 
 
-        SACTResearchView --&gt; &quot;0..1&quot; SACTAdministrationRouteCode : sact_administration_route
-        click SACTAdministrationRouteCode href &quot;../SACTAdministrationRouteCode/&quot;
+        SACTResearchView --&gt; "0..1" SACTAdministrationRouteCode : sact_administration_route
+        click SACTAdministrationRouteCode href "../SACTAdministrationRouteCode/"
 
 
 
@@ -19448,116 +19707,334 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
       SACTResearchView : weight_start_cycle
 
       SACTResearchView : weight_start_of_reg
-</code></pre></div>
 
-
-
-
+</code></pre>
 <!-- no inheritance hierarchy -->
-
-## Class Properties
-
-| Property | Value |
-| --- | --- |
-| Tree Root | Yes |
-
-
-## Slots
-
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [etl_id](etl_id.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
-| [etl_date](etl_date.md) | 0..1 <br/> [Datetime](Datetime.md) |  | direct |
-| [direct_care_published_runid](direct_care_published_runid.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
-| [dataset_name](dataset_name.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [ndo_run_date](ndo_run_date.md) | 0..1 <br/> [Date](Date.md) |  | direct |
-| [file_name](file_name.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [file_period_start](file_period_start.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [file_period_end](file_period_end.md) | 0..1 <br/> [String](String.md) |  | direct |
-| [pseudo_nhs_number](pseudo_nhs_number.md) | 0..1 <br/> [String](String.md) | The NHS NUMBER, the primary identifier of a PERSON, is a unique identifier fo... | direct |
-| [nhs_number_status](nhs_number_status.md) | 0..1 <br/> [NHSNumberStatusCode](NHSNumberStatusCode.md) | The NHS NUMBER STATUS INDICATOR CODE indicates the verification status of the... | direct |
-| [date_of_birth_year](date_of_birth_year.md) | 0..1 <br/> [String](String.md) | Year component of the patient's date of birth, extracted from DATE OF BIRTH f... | direct |
-| [date_of_birth_month](date_of_birth_month.md) | 0..1 <br/> [String](String.md) | Month component of the patient's date of birth, extracted from DATE OF BIRTH ... | direct |
-| [date_of_birth_mid_month](date_of_birth_mid_month.md) | 0..1 <br/> [Date](Date.md) | Approximate date of birth using the 15th of the birth month, for use in age c... | direct |
-| [person_stated_gender_code](person_stated_gender_code.md) | 0..1 <br/> [PersonStatedGenderCode](PersonStatedGenderCode.md) | Person's gender as self-declared (or inferred by observation for those unable... | direct |
-| [llsoa](llsoa.md) | 0..1 <br/> [String](String.md) | Lower Layer Super Output Area, derived from PATIENT POSTCODE for geographic a... | direct |
-| [consultant_gmc_code](consultant_gmc_code.md) | 0..1 <br/> [String](String.md) | Code of the consultant who initiated the SACT treatment | direct |
-| [consultant_spec_code](consultant_spec_code.md) | 0..1 <br/> [String](String.md) | Specialty code of the consultant who initiated the SACT treatment | direct |
-| [org_id_code_provider](org_id_code_provider.md) | 0..1 <br/> [String](String.md) | The ORGANISATION IDENTIFIER of the Organisation acting as a Health Care Provi... | direct |
-| [primary_diagnosis](primary_diagnosis.md) | 0..1 <br/> [String](String.md) | Primary diagnosis at time of decision to treat, coded using ICD | direct |
-| [morphology_icd_o](morphology_icd_o.md) | 0..1 <br/> [String](String.md) | Morphology coded using ICD-O at time of decision to treat | direct |
-| [diagnosis_code_snomed](diagnosis_code_snomed.md) | 0..1 <br/> [String](String.md) | SNOMED CT concept ID identifying the clinical diagnosis given to the patient | direct |
-| [adjunctive_therapy](adjunctive_therapy.md) | 0..1 <br/> [AdjunctiveTherapyType](AdjunctiveTherapyType.md) | Adjunctive therapy is therapy given in addition to the main therapy to maximi... | direct |
-| [intent_of_treatment](intent_of_treatment.md) | 0..1 <br/> [IntentOfTreatment](IntentOfTreatment.md) | Intent of the SACT regimen | direct |
-| [regimen](regimen.md) | 0..1 <br/> [String](String.md) | The acronym derived from the drugs used in the Anti-Cancer Drug Regimen, used... | direct |
-| [height_start_reg](height_start_reg.md) | 0..1 <br/> [Float](Float.md) | Height in metres at start of SACT regimen | direct |
-| [weight_start_of_reg](weight_start_of_reg.md) | 0..1 <br/> [Float](Float.md) | Weight in kilogrammes at start of SACT regimen | direct |
-| [perf_status_start_reg_ad](perf_status_start_reg_ad.md) | 0..1 <br/> [PerformanceStatusAdult](PerformanceStatusAdult.md) | WHO performance status at start of the regimen, for patients aged 19 years an... | direct |
-| [co_morbidity_adjustment](co_morbidity_adjustment.md) | 0..1 <br/> [YesNoIndicator](YesNoIndicator.md) | Whether the patient's overall physical state (other diseases and conditions) ... | direct |
-| [date_decision_to_treat](date_decision_to_treat.md) | 0..1 <br/> [Date](Date.md) | The date on which the consultation between the PATIENT and the clinician took... | direct |
-| [start_date_regimen](start_date_regimen.md) | 0..1 <br/> [Date](Date.md) | The first administration date of the first cycle of a regimen | direct |
-| [clinical_trial](clinical_trial.md) | 0..1 <br/> [ClinicalTrialIndicator](ClinicalTrialIndicator.md) | Records whether the patient is currently in an active Systemic Anti-Cancer Th... | direct |
-| [cycle_number](cycle_number.md) | 0..1 <br/> [Integer](Integer.md) | Cycle number, numbered sequentially within each regimen | direct |
-| [start_date_cycle](start_date_cycle.md) | 0..1 <br/> [Date](Date.md) | Date of first drug administration in each cycle | direct |
-| [weight_start_cycle](weight_start_cycle.md) | 0..1 <br/> [Float](Float.md) | Weight in kilogrammes at start of the cycle | direct |
-| [perf_stat_start_cycle_ad](perf_stat_start_cycle_ad.md) | 0..1 <br/> [PerformanceStatusAdult](PerformanceStatusAdult.md) | WHO performance status at start of the cycle, for patients aged 19 years and ... | direct |
-| [drug_name](drug_name.md) | 0..1 <br/> [String](String.md) | The name of the anti-cancer drug, taken from the British National Formulary | direct |
-| [dm_d](dm_d.md) | 0..1 <br/> [String](String.md) | The unique ID from the dm+d (Dictionary of Medicines and Devices) database, b... | direct |
-| [actual_dose_per_admin](actual_dose_per_admin.md) | 0..1 <br/> [String](String.md) | Dose in mg or other applicable unit for each administration in a SACT cycle | direct |
-| [admin_meas_per_actual_dose](admin_meas_per_actual_dose.md) | 0..1 <br/> [AdministrationMeasurementCode](AdministrationMeasurementCode.md) | Units of measurement used for each administration in a SACT cycle | direct |
-| [ot_admin_meas_per_actual_dose](ot_admin_meas_per_actual_dose.md) | 0..1 <br/> [String](String.md) | Free-text description of a unit of measurement not available within the coded... | direct |
-| [unit_meas_snomed_ct_dm_d](unit_meas_snomed_ct_dm_d.md) | 0..1 <br/> [String](String.md) | The SNOMED CT concept ID from the NHS Dictionary of Medicines and Devices ide... | direct |
-| [sact_administration_route](sact_administration_route.md) | 0..1 <br/> [SACTAdministrationRouteCode](SACTAdministrationRouteCode.md) | The prescribed method of delivery for each administration in a SACT cycle | direct |
-| [route_admin_snomed_ct_dm_d](route_admin_snomed_ct_dm_d.md) | 0..1 <br/> [String](String.md) | The SNOMED CT concept ID from the NHS Dictionary of Medicines and Devices ide... | direct |
-| [administration_date](administration_date.md) | 0..1 <br/> [Date](Date.md) | The date on which the anti-cancer drug was administered to a patient, an infu... | direct |
-| [org_identifier_sact_admin](org_identifier_sact_admin.md) | 0..1 <br/> [String](String.md) | Organisation Identifier of the organisation responsible for each administrati... | direct |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact
-
-
-
-
-## Mappings
-
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | sact:SACTResearchView |
-| native | sact:SACTResearchView |
-
-
-
-
-
-
-## LinkML Source
-
+<h2 id="class-properties">Class Properties<a class="headerlink" href="#class-properties" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tree Root</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots<a class="headerlink" href="#slots" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+<th>Inheritance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../etl_id/">etl_id</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../etl_date/">etl_date</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../direct_care_published_runid/">direct_care_published_runid</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../dataset_name/">dataset_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../ndo_run_date/">ndo_run_date</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../file_name/">file_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../file_period_start/">file_period_start</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../file_period_end/">file_period_end</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../pseudo_nhs_number/">pseudo_nhs_number</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The NHS NUMBER, the primary identifier of a PERSON, is a unique identifier fo...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../nhs_number_status/">nhs_number_status</a></td>
+<td>0..1 <br/> <a href="../NHSNumberStatusCode/">NHSNumberStatusCode</a></td>
+<td>The NHS NUMBER STATUS INDICATOR CODE indicates the verification status of the...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../date_of_birth_year/">date_of_birth_year</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Year component of the patient's date of birth, extracted from DATE OF BIRTH f...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../date_of_birth_month/">date_of_birth_month</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Month component of the patient's date of birth, extracted from DATE OF BIRTH ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../date_of_birth_mid_month/">date_of_birth_mid_month</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>Approximate date of birth using the 15th of the birth month, for use in age c...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../person_stated_gender_code/">person_stated_gender_code</a></td>
+<td>0..1 <br/> <a href="../PersonStatedGenderCode/">PersonStatedGenderCode</a></td>
+<td>Person's gender as self-declared (or inferred by observation for those unable...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../llsoa/">llsoa</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Lower Layer Super Output Area, derived from PATIENT POSTCODE for geographic a...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../consultant_gmc_code/">consultant_gmc_code</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Code of the consultant who initiated the SACT treatment</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../consultant_spec_code/">consultant_spec_code</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Specialty code of the consultant who initiated the SACT treatment</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../org_id_code_provider/">org_id_code_provider</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The ORGANISATION IDENTIFIER of the Organisation acting as a Health Care Provi...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../primary_diagnosis/">primary_diagnosis</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Primary diagnosis at time of decision to treat, coded using ICD</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../morphology_icd_o/">morphology_icd_o</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Morphology coded using ICD-O at time of decision to treat</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../diagnosis_code_snomed/">diagnosis_code_snomed</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>SNOMED CT concept ID identifying the clinical diagnosis given to the patient</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../adjunctive_therapy/">adjunctive_therapy</a></td>
+<td>0..1 <br/> <a href="../AdjunctiveTherapyType/">AdjunctiveTherapyType</a></td>
+<td>Adjunctive therapy is therapy given in addition to the main therapy to maximi...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../intent_of_treatment/">intent_of_treatment</a></td>
+<td>0..1 <br/> <a href="../IntentOfTreatment/">IntentOfTreatment</a></td>
+<td>Intent of the SACT regimen</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../regimen/">regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The acronym derived from the drugs used in the Anti-Cancer Drug Regimen, used...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../height_start_reg/">height_start_reg</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>Height in metres at start of SACT regimen</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../weight_start_of_reg/">weight_start_of_reg</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>Weight in kilogrammes at start of SACT regimen</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../perf_status_start_reg_ad/">perf_status_start_reg_ad</a></td>
+<td>0..1 <br/> <a href="../PerformanceStatusAdult/">PerformanceStatusAdult</a></td>
+<td>WHO performance status at start of the regimen, for patients aged 19 years an...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../co_morbidity_adjustment/">co_morbidity_adjustment</a></td>
+<td>0..1 <br/> <a href="../YesNoIndicator/">YesNoIndicator</a></td>
+<td>Whether the patient's overall physical state (other diseases and conditions) ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../date_decision_to_treat/">date_decision_to_treat</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>The date on which the consultation between the PATIENT and the clinician took...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../start_date_regimen/">start_date_regimen</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>The first administration date of the first cycle of a regimen</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../clinical_trial/">clinical_trial</a></td>
+<td>0..1 <br/> <a href="../ClinicalTrialIndicator/">ClinicalTrialIndicator</a></td>
+<td>Records whether the patient is currently in an active Systemic Anti-Cancer Th...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../cycle_number/">cycle_number</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Cycle number, numbered sequentially within each regimen</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../start_date_cycle/">start_date_cycle</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>Date of first drug administration in each cycle</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../weight_start_cycle/">weight_start_cycle</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>Weight in kilogrammes at start of the cycle</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../perf_stat_start_cycle_ad/">perf_stat_start_cycle_ad</a></td>
+<td>0..1 <br/> <a href="../PerformanceStatusAdult/">PerformanceStatusAdult</a></td>
+<td>WHO performance status at start of the cycle, for patients aged 19 years and ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../drug_name/">drug_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The name of the anti-cancer drug, taken from the British National Formulary</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../dm_d/">dm_d</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The unique ID from the dm+d (Dictionary of Medicines and Devices) database, b...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../actual_dose_per_admin/">actual_dose_per_admin</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Dose in mg or other applicable unit for each administration in a SACT cycle</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../admin_meas_per_actual_dose/">admin_meas_per_actual_dose</a></td>
+<td>0..1 <br/> <a href="../AdministrationMeasurementCode/">AdministrationMeasurementCode</a></td>
+<td>Units of measurement used for each administration in a SACT cycle</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../ot_admin_meas_per_actual_dose/">ot_admin_meas_per_actual_dose</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Free-text description of a unit of measurement not available within the coded...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../unit_meas_snomed_ct_dm_d/">unit_meas_snomed_ct_dm_d</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The SNOMED CT concept ID from the NHS Dictionary of Medicines and Devices ide...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sact_administration_route/">sact_administration_route</a></td>
+<td>0..1 <br/> <a href="../SACTAdministrationRouteCode/">SACTAdministrationRouteCode</a></td>
+<td>The prescribed method of delivery for each administration in a SACT cycle</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../route_admin_snomed_ct_dm_d/">route_admin_snomed_ct_dm_d</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The SNOMED CT concept ID from the NHS Dictionary of Medicines and Devices ide...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../administration_date/">administration_date</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>The date on which the anti-cancer drug was administered to a patient, an infu...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../org_identifier_sact_admin/">org_identifier_sact_admin</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Organisation Identifier of the organisation responsible for each administrati...</td>
+<td>direct</td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permanent link">&para;</a></h2>
+<h3 id="schema-source">Schema Source<a class="headerlink" href="#schema-source" title="Permanent link">&para;</a></h3>
+<ul>
+<li>from schema: https://health-informatics-uon.github.io/nuh-data/datasets/sact</li>
+</ul>
+<h2 id="mappings">Mappings<a class="headerlink" href="#mappings" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>sact:SACTResearchView</td>
+</tr>
+<tr>
+<td>native</td>
+<td>sact:SACTResearchView</td>
+</tr>
+</tbody>
+</table>
+<h2 id="linkml-source">LinkML Source<a class="headerlink" href="#linkml-source" title="Permanent link">&para;</a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
-
-### Direct
-
+<h3 id="direct">Direct<a class="headerlink" href="#direct" title="Permanent link">&para;</a></h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SACTResearchView</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Flat research view combining patient, regimen, cycle, and drug administration</span>
@@ -19614,9 +20091,7 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 <span class="nt">tree_root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
-
-### Induced
-
+<h3 id="induced">Induced<a class="headerlink" href="#induced" title="Permanent link">&para;</a></h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SACTResearchView</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Flat research view combining patient, regimen, cycle, and drug administration</span>
@@ -20448,7 +20923,8 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="nt">tree_root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-</details></div>
+</details>
+</div>
 
 
 
@@ -20474,6 +20950,18 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
         
       </main>
       
+  <div class="md-footer-logo">
+    <div class="md-footer-logo__inner md-grid">
+      <a href="https://nottinghambrc.nihr.ac.uk/" target="_blank" rel="noopener">
+        <img
+          src="../../../footer-logo.svg"
+          alt="Nottingham Biomedical Research Centre"
+          class="md-footer-logo__image"
+        >
+      </a>
+    </div>
+  </div>
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -20481,17 +20969,13 @@ URI: [sact:SACTResearchView](https://health-informatics-uon.github.io/nuh-data/d
       <div class="md-copyright">
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
     </div>
   </div>
 </footer>
       
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
