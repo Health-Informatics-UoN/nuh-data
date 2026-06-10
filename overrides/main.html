@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block footer %}
+  <div class="md-footer-logo">
+    <div class="md-footer-logo__inner md-grid">
+      <a href="https://nottinghambrc.nihr.ac.uk/" target="_blank" rel="noopener">
+        <img
+          src="{{ base_url }}/footer-logo.svg"
+          alt="Nottingham Biomedical Research Centre"
+          class="md-footer-logo__image"
+        >
+      </a>
+    </div>
+  </div>
+  {{ super() }}
+{% endblock %}

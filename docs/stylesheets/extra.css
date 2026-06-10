@@ -1,0 +1,74 @@
+/* Brand palette — light mode */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:              #42546A;
+  --md-primary-fg-color--light:       #5a7190;
+  --md-primary-fg-color--dark:        #354356;
+  --md-primary-bg-color:              #ffffff;
+  --md-primary-bg-color--light:       rgba(255, 255, 255, 0.7);
+  --md-accent-fg-color:               #EA5D4E;
+  --md-accent-fg-color--transparent:  rgba(234, 93, 78, 0.1);
+  --md-accent-bg-color:               #ffffff;
+  --md-default-bg-color:              #F1F2F2;
+}
+
+/* Brand palette — dark mode (slate); --md-default-bg-color intentionally omitted
+   so Material's dark background is preserved */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:              #42546A;
+  --md-primary-fg-color--light:       #5a7190;
+  --md-primary-fg-color--dark:        #354356;
+  --md-primary-bg-color:              #ffffff;
+  --md-primary-bg-color--light:       rgba(255, 255, 255, 0.7);
+  --md-accent-fg-color:               #EA5D4E;
+  --md-accent-fg-color--transparent:  rgba(234, 93, 78, 0.1);
+  --md-accent-bg-color:               #ffffff;
+}
+
+/* Text selection highlight */
+::selection {
+  background-color: #EA5D4E;
+  color: #ffffff;
+}
+
+/* Header / navbar */
+.md-header {
+  background-color: #42546A;
+}
+
+/* Footer nav area */
+.md-footer {
+  background-color: #42546A;
+}
+
+/* Sub-footer (copyright bar) */
+.md-footer-meta {
+  background-color: #354356;
+}
+
+/* Footer logo bar */
+.md-footer-logo {
+  background-color: #42546A;
+  padding: 1.5rem 0;
+}
+
+.md-footer-logo__inner {
+  display: flex;
+  align-items: center;
+  padding: 0 0.8rem;
+}
+
+.md-footer-logo__image {
+  height: 1.5rem;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Hide default Material logo icon in navbar */
+.md-header__button.md-logo {
+  display: none;
+}
+
+/* Hide schema URI section emitted by gen-doc at the top of generated pages */
+[data-search-exclude] {
+  display: none;
+}
