@@ -1,5 +1,6 @@
 # NUH Research Metadata
 
+[![DOI](https://zenodo.org/badge/1262720852.svg)](https://doi.org/10.5281/zenodo.20645162)
 [![MIT License][license-badge]][repo]
 [![Repo][github-badge]][repo]
 [![Releases][releases-badge]][releases]
