@@ -1,7 +1,7 @@
 # NUH Research Metadata
 
-[![MIT License][license-badge]][carrot-mapper-repo]
-[![Repo][github-badge]][carrot-mapper-repo]
+[![MIT License][license-badge]][repo]
+[![Repo][github-badge]][repo]
 [![Releases][releases-badge]][releases]
 ![Python][python-badge]
 [![Docs][docs-badge]][docs]
