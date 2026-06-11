@@ -1,5 +1,11 @@
 # NUH Research Metadata
 
+[![MIT License][license-badge]][carrot-mapper-repo]
+[![Repo][github-badge]][carrot-mapper-repo]
+[![Releases][releases-badge]][releases]
+![Python][python-badge]
+[![Docs][docs-badge]][docs]
+
 Data dictionaries, schema definitions, and metadata for research datasets from **Nottingham University Hospitals NHS Trust (NUH)**, one of the largest acute NHS trusts in England, serving a population of approximately 2.5 million across Nottinghamshire and surrounding counties.
 
 This repository describes the **structure and content** of each dataset — field names, types, permitted values, and coding standards. All datasets are pseudonymised research views; access to the data requires a formal data access request.
@@ -33,3 +39,9 @@ record = SACTResearchView(
 ```
 
 Models are generated directly from the LinkML schemas, so field names, types, and permitted values stay in sync with the data dictionaries published in this repository.
+
+
+[repo]: https://github.com/Health-Informatics-UoN/nuh-data
+[docs]: https://health-informatics-uon.github.io/nuh-data/
+[releases]: https://github.com/Health-Informatics-UoN/nuh-data/releases
+[releases-badge]: https://img.shields.io/github/v/release/health-informatics-uon/nuh-data?include_prereleases&style=flat-square
