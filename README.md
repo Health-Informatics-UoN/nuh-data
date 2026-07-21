@@ -48,7 +48,7 @@ Models are generated directly from the LinkML schemas, so field names, types, an
 [releases-badge]: https://img.shields.io/github/v/release/health-informatics-uon/nuh-data?include_prereleases&style=flat-square
 [doi]: https://doi.org/10.5281/zenodo.20645162
 
-[doi-badge]: https://zenodo.org/badge/1262720852.svg
+[doi-badge]: https://zenodo.org/badge/DOI/10.5281/zenodo.20645163.svg
 [license-badge]: https://img.shields.io/github/license/health-informatics-uon/nuh-data.svg?style=flat-square
 [python-badge]: https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white
 [docs-badge]: https://img.shields.io/badge/docs-black?style=flat-square&labelColor=%23222
