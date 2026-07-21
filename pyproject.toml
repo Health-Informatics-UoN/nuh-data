@@ -22,5 +22,5 @@ source = "vcs"
 dev = [
     "linkml>=1.11.1",
     "mkdocs>=1.6",
-    "mkdocs-material>=9.0",
+    "mkdocs-material>=9.7.7",
 ]
