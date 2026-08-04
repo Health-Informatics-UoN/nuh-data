@@ -1,0 +1,244 @@
+id: https://health-informatics-uon.github.io/nuh-data/datasets/demographics
+name: demographics
+title: demographics
+description: >-
+  demographics
+
+license: demographics
+
+created_by: https://github.com/Health-Informatics-UoN
+
+annotations:
+  data_custodian: Nottingham University Hospitals NHS Trust
+  created_by_name: Nottingham University Hospitals NHS Trust
+  geographic_coverage: Nottinghamshire, England
+  data_standards: OTHER
+  access_request_type: Data Access Request
+  access_status: In Progress
+
+keywords:
+  - NHS
+  - Nottingham
+  - clinical
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cosd: https://health-informatics-uon.github.io/nuh-data/datasets/cosd/
+  SNOMED: http://snomed.info/id/
+  ICD: http://id.who.int/icd/entity/
+  OPCS: https://datadictionary.nhs.uk/attributes/opcs_code/
+  NICIP: https://www.datadictionary.nhs.uk/nhs_business_definitions/nicip_code/
+  dmd: https://dmd.nhs.uk/concept/
+
+default_prefix: demographics
+default_range: string
+
+imports:
+  - linkml:types
+
+classes:
+  Demographics:
+    description: >-
+      demographics
+    tree_root: true
+    slots:
+      - etl_id
+      - etl_date
+      - core_pid_published_runid
+      - ndo_run_date
+      - pseudo_nhs_number
+      - dob_mid_month
+      - deceased
+      - date_of_death
+      - sex_code
+      - sex
+      - gender_identity_code
+      - gender_identity
+      - admin_gender
+      - ethnicity_code
+      - ethnicity
+      - marital_status_code
+      - marital_status
+      - religion_code
+      - religion
+      - nationality
+      - llsoa
+
+slots:
+  etl_id:
+    description: "Internal identifier for the ETL batch run that loaded this record."
+    range: integer
+    required: false
+    annotations:
+      sql_column: ETL_ID
+      sql_type: "INT"
+
+  etl_date:
+    description: "Date and time the ETL process ran."
+    range: datetime
+    required: false
+    annotations:
+      sql_column: ETL_DATE
+      sql_type: "DATETIME"
+
+  ndo_run_date:
+    description: ""
+    range: date
+    required: false
+    annotations:
+      sql_column: NDO_RUN_DATE
+      sql_type: DATE
+
+  pseudo_nhs_number:
+    description: >-
+      The NHS NUMBER, the primary identifier of a PERSON, is a unique identifier
+      for a PATIENT within the NHS in England and Wales. Pseudonymised for
+      research use.
+    range: string
+    required: false
+    annotations:
+      sql_column: PSEUDO_NHS_NUMBER
+      sql_type: "VARBINARY(100)"
+      sensitivity: pseudonymised
+
+  dob_mid_month:
+    description: "Mid-month proxy date of birth, derived as the 15th of the patient's birth month."
+    range: date
+    required: false
+    annotations:
+      sql_column: DOB_MID_MONTH
+      sql_type: "DATE"
+
+  llsoa:
+    description: >-
+      Lower Layer Super Output Area, derived from PATIENT POSTCODE for
+      geographic analysis while preserving patient privacy.
+    range: string
+    required: false
+    annotations:
+      sql_column: LLSOA
+      sql_type: "NVARCHAR(200)"
+
+## ####
+# unclear about these
+##
+
+  core_pid_published_runid:
+    description: "TBA"
+    range: integer
+    required: false
+    annotations:
+      sql_column: CORE_PID_PUBLISHED_RUNID
+      sql_type: "INT"
+
+  deceased:
+    description: "TBA"
+    range: integer
+    required: false
+    annotations:
+      sql_column: DECEASED
+      sql_type: "INT"
+
+  date_of_death:
+    description: "(TBA) The date of the participant's death"
+    range: date
+    required: false
+    annotations:
+      sql_column: DATE_OF_DEATH
+      sql_type: "DATE"
+
+  sex_code:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: SEX_CODE
+      sql_type: "NVARCHAR(12)"
+
+  sex:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: SEX
+      sql_type: "NVARCHAR(128)"
+
+  gender_identity_code:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: GENDER_IDENTITY_CODE
+      sql_type: "NVARCHAR(12)"
+
+  gender_identity:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: GENDER_IDENTITY
+      sql_type: "NVARCHAR(128)"
+
+  admin_gender:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: ADMIN_GENDER
+      sql_type: "NVARCHAR(128)"
+
+  ethnicity_code:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: ETHNICITY_CODE
+      sql_type: "NVARCHAR(12)"
+
+  ethnicity:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: ETHNICITY
+      sql_type: "NVARCHAR(128)"
+
+  marital_status_code:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: MARITAL_STATUS_CODE
+      sql_type: "NVARCHAR(12)"
+
+  marital_status:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: MARITAL_STATUS
+      sql_type: "NVARCHAR(128)"
+
+  religion_code:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: RELIGION_CODE
+      sql_type: "NVARCHAR(12)"
+
+  religion:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: RELIGION
+      sql_type: "NVARCHAR(128)"
+
+  nationality:
+    description: "TBA"
+    range: string
+    required: false
+    annotations:
+      sql_column: NATIONALITY
+      sql_type: "NVARCHAR(100)"

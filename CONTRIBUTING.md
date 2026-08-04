@@ -3,7 +3,6 @@
 ## Prerequisites
 
 - [uv](https://docs.astral.sh/uv/) for dependency management
-- Python 3.13+
 
 Install dev dependencies:
 
@@ -48,16 +47,15 @@ Warnings about empty `description` fields are expected — per-field documentati
 ## Adding a new dataset
 
 1. Create `schemas/datasets/<name>/` and add `<name>.yaml` (copy the SACT schema as a template).
-2. Add `<name>.sql` alongside it if you have a source DDL.
-3. Add an entry to `SCHEMA_MAP` in `scripts/generate.py`:
+2. Add an entry to `SCHEMA_MAP` in `scripts/generate.py`:
    ```python
    "schemas/datasets/<name>/<name>.yaml": "src/nuh_data/datasets/<name>/model.py",
    ```
-4. Create `src/nuh_data/datasets/<name>/__init__.py`:
+3. Create `src/nuh_data/datasets/<name>/__init__.py`:
    ```python
    from .model import *
    ```
-5. Run `uv run python scripts/generate.py` and commit everything together.
+4. Run `uv run python scripts/generate.py` and commit everything together.
 
 ---
 
@@ -65,10 +63,10 @@ Warnings about empty `description` fields are expected — per-field documentati
 
 Two required checks run on every PR:
 
-| Check | Command | Fails on |
-|---|---|---|
+| Check       | Command                                  | Fails on                     |
+| ----------- | ---------------------------------------- | ---------------------------- |
 | Schema lint | `linkml lint --ignore-warnings schemas/` | Schema errors (not warnings) |
-| Sync check | `python scripts/check_sync.py` | Generated model out of date |
+| Sync check  | `python scripts/check_sync.py`           | Generated model out of date  |
 
 If the sync check fails, run `uv run python scripts/generate.py` and push the updated `model.py`.
 
