@@ -37,9 +37,9 @@ imports:
   - linkml:types
 
 classes:
-  Demographics:
+  CoreDemographics:
     description: >-
-      demographics
+      (TBA) demographics
     tree_root: true
     slots:
       - etl_id

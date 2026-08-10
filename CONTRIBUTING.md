@@ -47,15 +47,20 @@ Warnings about empty `description` fields are expected — per-field documentati
 ## Adding a new dataset
 
 1. Create `schemas/datasets/<name>/` and add `<name>.yaml` (copy the SACT schema as a template).
+    - don't use `<name>` for the class name in `classes:` (it will lead to missing `.md` files)
 2. Add an entry to `SCHEMA_MAP` in `scripts/generate.py`:
-   ```python
+    ```python
    "schemas/datasets/<name>/<name>.yaml": "src/nuh_data/datasets/<name>/model.py",
-   ```
+    ```
 3. Create `src/nuh_data/datasets/<name>/__init__.py`:
-   ```python
-   from .model import *
-   ```
-4. Run `uv run python scripts/generate.py` and commit everything together.
+    ```python
+    from .model import *
+    ```
+4. Add `uv run gen-doc -d docs/datasets/<name> schemas/datasets/<name>/<name>.yaml` to `.github/workflows/publish.docs.yml`
+5. Generate and check/test the site locally
+    - for each schema, run `uv run gen-doc -d docs/datasets/<name> schemas/datasets/<name>/<name>.yaml`
+    - then run `uv run mkdocs serve` to run a local copy of the site
+6. Run `uv run python scripts/generate.py` and commit everything together.
 
 ---
 
