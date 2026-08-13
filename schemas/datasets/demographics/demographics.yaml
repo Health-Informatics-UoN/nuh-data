@@ -124,7 +124,7 @@ slots:
 ##
 
   core_pid_published_runid:
-    description: "TBA"
+    description: "pipeline meta data"
     range: integer
     required: false
     annotations:
@@ -132,7 +132,7 @@ slots:
       sql_type: "INT"
 
   deceased:
-    description: "TBA"
+    description: "an integer code defining wether the participant is deceased"
     range: integer
     required: false
     annotations:
@@ -140,7 +140,7 @@ slots:
       sql_type: "INT"
 
   date_of_death:
-    description: "(TBA) The date of the participant's death"
+    description: "The date of the participant's death"
     range: date
     required: false
     annotations:
@@ -148,7 +148,10 @@ slots:
       sql_type: "DATE"
 
   sex_code:
-    description: "TBA"
+    description: >-
+      The sex of PATIENTS intended to use a WARD indicated in the WARD OPERATIONAL PLANS, with the addition of Home Leave.
+
+      https://www.datadictionary.nhs.uk/data_elements/sex_of_patients_code.html
     range: string
     required: false
     annotations:
@@ -156,7 +159,10 @@ slots:
       sql_type: "NVARCHAR(12)"
 
   sex:
-    description: "TBA"
+    description: >-
+      The sex of PATIENTS intended to use a WARD indicated in the WARD OPERATIONAL PLANS, with the addition of Home Leave.
+
+      https://www.datadictionary.nhs.uk/data_elements/sex_of_patients_code.html
     range: string
     required: false
     annotations:
@@ -164,7 +170,10 @@ slots:
       sql_type: "NVARCHAR(128)"
 
   gender_identity_code:
-    description: "TBA"
+    description: >-
+      The gender identity of a PERSON as stated by the PERSON.
+
+      https://www.datadictionary.nhs.uk/attributes/gender_identity_code.html
     range: string
     required: false
     annotations:
@@ -172,7 +181,10 @@ slots:
       sql_type: "NVARCHAR(12)"
 
   gender_identity:
-    description: "TBA"
+    description: >-
+      The gender identity of a PERSON as stated by the PERSON.
+
+      https://www.datadictionary.nhs.uk/attributes/gender_identity_code.html
     range: string
     required: false
     annotations:
@@ -180,7 +192,7 @@ slots:
       sql_type: "NVARCHAR(128)"
 
   admin_gender:
-    description: "TBA"
+    description: "a code detailing the patient's gender from and administrative perspective"
     range: string
     required: false
     annotations:
@@ -188,7 +200,10 @@ slots:
       sql_type: "NVARCHAR(128)"
 
   ethnicity_code:
-    description: "TBA"
+    description: >-
+      The ethnicity of a PERSON, as specified by the PERSON.
+
+      https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/mental-health-services-data-set/submit-data/data-quality-of-protected-characteristics-and-other-vulnerable-groups/ethnicity
     range: string
     required: false
     annotations:
@@ -196,7 +211,10 @@ slots:
       sql_type: "NVARCHAR(12)"
 
   ethnicity:
-    description: "TBA"
+    description: >-
+      The ethnicity of a PERSON, as specified by the PERSON.
+      
+      https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/mental-health-services-data-set/submit-data/data-quality-of-protected-characteristics-and-other-vulnerable-groups/ethnicity
     range: string
     required: false
     annotations:
@@ -204,7 +222,10 @@ slots:
       sql_type: "NVARCHAR(128)"
 
   marital_status_code:
-    description: "TBA"
+    description: >-
+      An indicator to identify the legal marital status of a PERSON.
+
+      https://www.datadictionary.nhs.uk/data_elements/person_marital_status.html
     range: string
     required: false
     annotations:
@@ -212,7 +233,10 @@ slots:
       sql_type: "NVARCHAR(12)"
 
   marital_status:
-    description: "TBA"
+    description: >-
+      An indicator to identify the legal marital status of a PERSON.
+
+      https://www.datadictionary.nhs.uk/data_elements/person_marital_status.html
     range: string
     required: false
     annotations:
@@ -220,7 +244,10 @@ slots:
       sql_type: "NVARCHAR(128)"
 
   religion_code:
-    description: "TBA"
+    description: >-
+      The RELIGIOUS OR OTHER BELIEF SYSTEM AFFILIATION  of a PERSON , as specified by a PERSON .
+
+      https://archive.datadictionary.nhs.uk/DD%20Release%20May%202024/attributes/religious_or_other_belief_system_affiliation_code.html
     range: string
     required: false
     annotations:
@@ -228,7 +255,10 @@ slots:
       sql_type: "NVARCHAR(12)"
 
   religion:
-    description: "TBA"
+    description: >-
+      The RELIGIOUS OR OTHER BELIEF SYSTEM AFFILIATION  of a PERSON , as specified by a PERSON .
+      
+      https://archive.datadictionary.nhs.uk/DD%20Release%20May%202024/attributes/religious_or_other_belief_system_affiliation_code.html
     range: string
     required: false
     annotations:
@@ -236,7 +266,7 @@ slots:
       sql_type: "NVARCHAR(128)"
 
   nationality:
-    description: "TBA"
+    description: a text description of the patient's nationality
     range: string
     required: false
     annotations:
