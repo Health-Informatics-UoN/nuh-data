@@ -119,7 +119,7 @@ class CoreDemographics(ConfiguredBaseModel):
     etl_date: Optional[datetime ] = Field(default=None, description="""Date and time the ETL process ran.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETL_DATE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'DATETIME'}},
          'domain_of': ['CoreDemographics']} })
-    core_pid_published_runid: Optional[int] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    core_pid_published_runid: Optional[int] = Field(default=None, description="""pipeline meta data""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'CORE_PID_PUBLISHED_RUNID'},
                          'sql_type': {'tag': 'sql_type', 'value': 'INT'}},
          'domain_of': ['CoreDemographics']} })
@@ -135,49 +135,59 @@ class CoreDemographics(ConfiguredBaseModel):
     dob_mid_month: Optional[date] = Field(default=None, description="""Mid-month proxy date of birth, derived as the 15th of the patient's birth month.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'DOB_MID_MONTH'},
                          'sql_type': {'tag': 'sql_type', 'value': 'DATE'}},
          'domain_of': ['CoreDemographics']} })
-    deceased: Optional[int] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'DECEASED'},
+    deceased: Optional[int] = Field(default=None, description="""an integer code defining wether the participant is deceased""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'DECEASED'},
                          'sql_type': {'tag': 'sql_type', 'value': 'INT'}},
          'domain_of': ['CoreDemographics']} })
-    date_of_death: Optional[date] = Field(default=None, description="""(TBA) The date of the participant's death""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'DATE_OF_DEATH'},
+    date_of_death: Optional[date] = Field(default=None, description="""The date of the participant's death""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'DATE_OF_DEATH'},
                          'sql_type': {'tag': 'sql_type', 'value': 'DATE'}},
          'domain_of': ['CoreDemographics']} })
-    sex_code: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'SEX_CODE'},
+    sex_code: Optional[str] = Field(default=None, description="""The sex of PATIENTS intended to use a WARD indicated in the WARD OPERATIONAL PLANS, with the addition of Home Leave.
+https://www.datadictionary.nhs.uk/data_elements/sex_of_patients_code.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'SEX_CODE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(12)'}},
          'domain_of': ['CoreDemographics']} })
-    sex: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'SEX'},
+    sex: Optional[str] = Field(default=None, description="""The sex of PATIENTS intended to use a WARD indicated in the WARD OPERATIONAL PLANS, with the addition of Home Leave.
+https://www.datadictionary.nhs.uk/data_elements/sex_of_patients_code.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'SEX'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(128)'}},
          'domain_of': ['CoreDemographics']} })
-    gender_identity_code: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    gender_identity_code: Optional[str] = Field(default=None, description="""The gender identity of a PERSON as stated by the PERSON.
+https://www.datadictionary.nhs.uk/attributes/gender_identity_code.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'GENDER_IDENTITY_CODE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(12)'}},
          'domain_of': ['CoreDemographics']} })
-    gender_identity: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    gender_identity: Optional[str] = Field(default=None, description="""The gender identity of a PERSON as stated by the PERSON.
+https://www.datadictionary.nhs.uk/attributes/gender_identity_code.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'GENDER_IDENTITY'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(128)'}},
          'domain_of': ['CoreDemographics']} })
-    admin_gender: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ADMIN_GENDER'},
+    admin_gender: Optional[str] = Field(default=None, description="""a code detailing the patient's gender from and administrative perspective""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ADMIN_GENDER'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(128)'}},
          'domain_of': ['CoreDemographics']} })
-    ethnicity_code: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETHNICITY_CODE'},
+    ethnicity_code: Optional[str] = Field(default=None, description="""The ethnicity of a PERSON, as specified by the PERSON.
+https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/mental-health-services-data-set/submit-data/data-quality-of-protected-characteristics-and-other-vulnerable-groups/ethnicity""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETHNICITY_CODE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(12)'}},
          'domain_of': ['CoreDemographics']} })
-    ethnicity: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETHNICITY'},
+    ethnicity: Optional[str] = Field(default=None, description="""The ethnicity of a PERSON, as specified by the PERSON.
+https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/mental-health-services-data-set/submit-data/data-quality-of-protected-characteristics-and-other-vulnerable-groups/ethnicity""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETHNICITY'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(128)'}},
          'domain_of': ['CoreDemographics']} })
-    marital_status_code: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
+    marital_status_code: Optional[str] = Field(default=None, description="""An indicator to identify the legal marital status of a PERSON.
+https://www.datadictionary.nhs.uk/data_elements/person_marital_status.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
                                         'value': 'MARITAL_STATUS_CODE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(12)'}},
          'domain_of': ['CoreDemographics']} })
-    marital_status: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'MARITAL_STATUS'},
+    marital_status: Optional[str] = Field(default=None, description="""An indicator to identify the legal marital status of a PERSON.
+https://www.datadictionary.nhs.uk/data_elements/person_marital_status.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'MARITAL_STATUS'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(128)'}},
          'domain_of': ['CoreDemographics']} })
-    religion_code: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'RELIGION_CODE'},
+    religion_code: Optional[str] = Field(default=None, description="""The RELIGIOUS OR OTHER BELIEF SYSTEM AFFILIATION  of a PERSON , as specified by a PERSON .
+https://archive.datadictionary.nhs.uk/DD%20Release%20May%202024/attributes/religious_or_other_belief_system_affiliation_code.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'RELIGION_CODE'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(12)'}},
          'domain_of': ['CoreDemographics']} })
-    religion: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'RELIGION'},
+    religion: Optional[str] = Field(default=None, description="""The RELIGIOUS OR OTHER BELIEF SYSTEM AFFILIATION  of a PERSON , as specified by a PERSON .
+https://archive.datadictionary.nhs.uk/DD%20Release%20May%202024/attributes/religious_or_other_belief_system_affiliation_code.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'RELIGION'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(128)'}},
          'domain_of': ['CoreDemographics']} })
-    nationality: Optional[str] = Field(default=None, description="""TBA""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'NATIONALITY'},
+    nationality: Optional[str] = Field(default=None, description="""a text description of the patient's nationality""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'NATIONALITY'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(100)'}},
          'domain_of': ['CoreDemographics']} })
     llsoa: Optional[str] = Field(default=None, description="""Lower Layer Super Output Area, derived from PATIENT POSTCODE for geographic analysis while preserving patient privacy.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'LLSOA'},
