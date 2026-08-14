@@ -108,7 +108,7 @@ linkml_meta = LinkMLMeta({'annotations': {'access_request_type': {'tag': 'access
 
 class CoreDemographics(ConfiguredBaseModel):
     """
-    (TBA) demographics
+    Pseudonymised patient demographic data (sex, DOB, ethnicity, LLSOA, etc.) for linkage with clinical datasets.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://health-informatics-uon.github.io/nuh-data/datasets/demographics',
          'tree_root': True})

@@ -39,7 +39,7 @@ imports:
 classes:
   CoreDemographics:
     description: >-
-      (TBA) demographics
+      Pseudonymised patient demographic data (sex, DOB, ethnicity, LLSOA, etc.) for linkage with clinical datasets.
     tree_root: true
     slots:
       - etl_id
