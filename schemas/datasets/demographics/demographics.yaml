@@ -23,7 +23,6 @@ keywords:
 
 prefixes:
   linkml: https://w3id.org/linkml/
-  cosd: https://health-informatics-uon.github.io/nuh-data/datasets/cosd/
   SNOMED: http://snomed.info/id/
   ICD: http://id.who.int/icd/entity/
   OPCS: https://datadictionary.nhs.uk/attributes/opcs_code/
@@ -118,10 +117,6 @@ slots:
     annotations:
       sql_column: LLSOA
       sql_type: "NVARCHAR(200)"
-
-## ####
-# unclear about these
-##
 
   core_pid_published_runid:
     description: "pipeline meta data"
