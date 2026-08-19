@@ -96,8 +96,6 @@ linkml_meta = LinkMLMeta({'annotations': {'access_request_type': {'tag': 'access
                            'prefix_reference': 'https://datadictionary.nhs.uk/attributes/opcs_code/'},
                   'SNOMED': {'prefix_prefix': 'SNOMED',
                              'prefix_reference': 'http://snomed.info/id/'},
-                  'cosd': {'prefix_prefix': 'cosd',
-                           'prefix_reference': 'https://health-informatics-uon.github.io/nuh-data/datasets/cosd/'},
                   'dmd': {'prefix_prefix': 'dmd',
                           'prefix_reference': 'https://dmd.nhs.uk/concept/'},
                   'linkml': {'prefix_prefix': 'linkml',
