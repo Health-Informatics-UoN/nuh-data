@@ -18,6 +18,9 @@ packages = ["src/nuh_data"]
 [tool.hatch.version]
 source = "vcs"
 
+[tool.uv]
+exclude-newer = "7 days"
+
 [dependency-groups]
 dev = [
     "linkml>=1.11.1",
