@@ -46,20 +46,20 @@ classes:
       - core_pid_published_runid
       - ndo_run_date
       - pseudo_nhs_number
-      - dob_mid_month
+      - dob_first_of_month
       - deceased
       - date_of_death
-      - sex_code
       - sex
-      - gender_identity_code
+      - sex_desc
       - gender_identity
+      - gender_identity_desc
       - admin_gender
-      - ethnicity_code
       - ethnicity
-      - marital_status_code
+      - ethnicity_desc
       - marital_status
-      - religion_code
+      - marital_status_desc
       - religion
+      - religion_desc
       - nationality
       - llsoa
 
@@ -100,12 +100,12 @@ slots:
       sql_type: "VARBINARY(100)"
       sensitivity: pseudonymised
 
-  dob_mid_month:
-    description: "Mid-month proxy date of birth, derived as the 15th of the patient's birth month."
+  dob_first_of_month:
+    description: "First of month proxy date of birth."
     range: date
     required: false
     annotations:
-      sql_column: DOB_MID_MONTH
+      sql_column: DOB_FIRST_OF_MONTH
       sql_type: "DATE"
 
   llsoa:
@@ -116,7 +116,7 @@ slots:
     required: false
     annotations:
       sql_column: LLSOA
-      sql_type: "NVARCHAR(200)"
+      sql_type: "NVARCHAR(100)"
 
   core_pid_published_runid:
     description: "pipeline meta data"
@@ -142,7 +142,7 @@ slots:
       sql_column: DATE_OF_DEATH
       sql_type: "DATE"
 
-  sex_code:
+  sex_desc:
     description: >-
       The sex of PATIENTS intended to use a WARD indicated in the WARD OPERATIONAL PLANS, with the addition of Home Leave.
 
@@ -151,7 +151,7 @@ slots:
     required: false
     annotations:
       sql_column: SEX_CODE
-      sql_type: "NVARCHAR(12)"
+      sql_type: "NVARCHAR(64)"
 
   sex:
     description: >-
@@ -162,9 +162,9 @@ slots:
     required: false
     annotations:
       sql_column: SEX
-      sql_type: "NVARCHAR(128)"
+      sql_type: "NVARCHAR(6)"
 
-  gender_identity_code:
+  gender_identity_desc:
     description: >-
       The gender identity of a PERSON as stated by the PERSON.
 
@@ -172,8 +172,8 @@ slots:
     range: string
     required: false
     annotations:
-      sql_column: GENDER_IDENTITY_CODE
-      sql_type: "NVARCHAR(12)"
+      sql_column: GENDER_IDENTITY_DESC
+      sql_type: "NVARCHAR(64)"
 
   gender_identity:
     description: >-
@@ -184,7 +184,7 @@ slots:
     required: false
     annotations:
       sql_column: GENDER_IDENTITY
-      sql_type: "NVARCHAR(128)"
+      sql_type: "NVARCHAR(6)"
 
   admin_gender:
     description: "a code detailing the patient's gender from and administrative perspective"
@@ -192,9 +192,9 @@ slots:
     required: false
     annotations:
       sql_column: ADMIN_GENDER
-      sql_type: "NVARCHAR(128)"
+      sql_type: "NVARCHAR(64)"
 
-  ethnicity_code:
+  ethnicity_desc:
     description: >-
       The ethnicity of a PERSON, as specified by the PERSON.
 
@@ -203,20 +203,19 @@ slots:
     required: false
     annotations:
       sql_column: ETHNICITY_CODE
-      sql_type: "NVARCHAR(12)"
+      sql_type: "NVARCHAR(64)"
 
   ethnicity:
     description: >-
       The ethnicity of a PERSON, as specified by the PERSON.
       
-      https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/mental-health-services-data-set/submit-data/data-quality-of-protected-characteristics-and-other-vulnerable-groups/ethnicity
     range: string
     required: false
     annotations:
       sql_column: ETHNICITY
-      sql_type: "NVARCHAR(128)"
+      sql_type: "NVARCHAR(6)"
 
-  marital_status_code:
+  marital_status_desc:
     description: >-
       An indicator to identify the legal marital status of a PERSON.
 
@@ -225,7 +224,7 @@ slots:
     required: false
     annotations:
       sql_column: MARITAL_STATUS_CODE
-      sql_type: "NVARCHAR(12)"
+      sql_type: "NVARCHAR(64)"
 
   marital_status:
     description: >-
@@ -236,9 +235,9 @@ slots:
     required: false
     annotations:
       sql_column: MARITAL_STATUS
-      sql_type: "NVARCHAR(128)"
+      sql_type: "NVARCHAR(6)"
 
-  religion_code:
+  religion_desc:
     description: >-
       The RELIGIOUS OR OTHER BELIEF SYSTEM AFFILIATION  of a PERSON , as specified by a PERSON .
 
@@ -247,7 +246,7 @@ slots:
     required: false
     annotations:
       sql_column: RELIGION_CODE
-      sql_type: "NVARCHAR(12)"
+      sql_type: "NVARCHAR(64)"
 
   religion:
     description: >-
@@ -258,7 +257,7 @@ slots:
     required: false
     annotations:
       sql_column: RELIGION
-      sql_type: "NVARCHAR(128)"
+      sql_type: "NVARCHAR(6)"
 
   nationality:
     description: a text description of the patient's nationality
@@ -266,4 +265,4 @@ slots:
     required: false
     annotations:
       sql_column: NATIONALITY
-      sql_type: "NVARCHAR(100)"
+      sql_type: "NVARCHAR(50)"
