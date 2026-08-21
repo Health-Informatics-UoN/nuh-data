@@ -145,7 +145,7 @@ https://www.datadictionary.nhs.uk/data_elements/sex_of_patients_code.html""", js
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(6)'}},
          'domain_of': ['CoreDemographics']} })
     sex_desc: Optional[str] = Field(default=None, description="""The sex of PATIENTS intended to use a WARD indicated in the WARD OPERATIONAL PLANS, with the addition of Home Leave.
-https://www.datadictionary.nhs.uk/data_elements/sex_of_patients_code.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'SEX_CODE'},
+https://www.datadictionary.nhs.uk/data_elements/sex_of_patients_code.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'SEX_DESC'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(64)'}},
          'domain_of': ['CoreDemographics']} })
     gender_identity: Optional[str] = Field(default=None, description="""The gender identity of a PERSON as stated by the PERSON.
@@ -164,8 +164,7 @@ https://www.datadictionary.nhs.uk/attributes/gender_identity_code.html""", json_
     ethnicity: Optional[str] = Field(default=None, description="""The ethnicity of a PERSON, as specified by the PERSON.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETHNICITY'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(6)'}},
          'domain_of': ['CoreDemographics']} })
-    ethnicity_desc: Optional[str] = Field(default=None, description="""The ethnicity of a PERSON, as specified by the PERSON.
-https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/mental-health-services-data-set/submit-data/data-quality-of-protected-characteristics-and-other-vulnerable-groups/ethnicity""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETHNICITY_CODE'},
+    ethnicity_desc: Optional[str] = Field(default=None, description="""The ethnicity of a PERSON, as specified by the PERSON.""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'ETHNICITY_DESC'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(64)'}},
          'domain_of': ['CoreDemographics']} })
     marital_status: Optional[str] = Field(default=None, description="""An indicator to identify the legal marital status of a PERSON.
@@ -174,7 +173,7 @@ https://www.datadictionary.nhs.uk/data_elements/person_marital_status.html""", j
          'domain_of': ['CoreDemographics']} })
     marital_status_desc: Optional[str] = Field(default=None, description="""An indicator to identify the legal marital status of a PERSON.
 https://www.datadictionary.nhs.uk/data_elements/person_marital_status.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column',
-                                        'value': 'MARITAL_STATUS_CODE'},
+                                        'value': 'MARITAL_STATUS_DESC'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(64)'}},
          'domain_of': ['CoreDemographics']} })
     religion: Optional[str] = Field(default=None, description="""The RELIGIOUS OR OTHER BELIEF SYSTEM AFFILIATION  of a PERSON , as specified by a PERSON .
@@ -182,7 +181,7 @@ https://archive.datadictionary.nhs.uk/DD%20Release%20May%202024/attributes/relig
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(6)'}},
          'domain_of': ['CoreDemographics']} })
     religion_desc: Optional[str] = Field(default=None, description="""The RELIGIOUS OR OTHER BELIEF SYSTEM AFFILIATION  of a PERSON , as specified by a PERSON .
-https://archive.datadictionary.nhs.uk/DD%20Release%20May%202024/attributes/religious_or_other_belief_system_affiliation_code.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'RELIGION_CODE'},
+https://archive.datadictionary.nhs.uk/DD%20Release%20May%202024/attributes/religious_or_other_belief_system_affiliation_code.html""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'RELIGION_DESC'},
                          'sql_type': {'tag': 'sql_type', 'value': 'NVARCHAR(64)'}},
          'domain_of': ['CoreDemographics']} })
     nationality: Optional[str] = Field(default=None, description="""a text description of the patient's nationality""", json_schema_extra = { "linkml_meta": {'annotations': {'sql_column': {'tag': 'sql_column', 'value': 'NATIONALITY'},
