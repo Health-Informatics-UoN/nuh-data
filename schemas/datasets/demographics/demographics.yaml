@@ -150,7 +150,7 @@ slots:
     range: string
     required: false
     annotations:
-      sql_column: SEX_CODE
+      sql_column: SEX_DESC
       sql_type: "NVARCHAR(64)"
 
   sex:
@@ -198,11 +198,10 @@ slots:
     description: >-
       The ethnicity of a PERSON, as specified by the PERSON.
 
-      https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/mental-health-services-data-set/submit-data/data-quality-of-protected-characteristics-and-other-vulnerable-groups/ethnicity
     range: string
     required: false
     annotations:
-      sql_column: ETHNICITY_CODE
+      sql_column: ETHNICITY_DESC
       sql_type: "NVARCHAR(64)"
 
   ethnicity:
@@ -223,7 +222,7 @@ slots:
     range: string
     required: false
     annotations:
-      sql_column: MARITAL_STATUS_CODE
+      sql_column: MARITAL_STATUS_DESC
       sql_type: "NVARCHAR(64)"
 
   marital_status:
@@ -245,7 +244,7 @@ slots:
     range: string
     required: false
     annotations:
-      sql_column: RELIGION_CODE
+      sql_column: RELIGION_DESC
       sql_type: "NVARCHAR(64)"
 
   religion:
