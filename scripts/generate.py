@@ -12,6 +12,7 @@ from pathlib import Path
 SCHEMA_MAP: dict[str, str] = {
     "schemas/datasets/sact/sact.yaml": "src/nuh_data/datasets/sact/model.py",
     "schemas/datasets/cosd/cosd.yaml": "src/nuh_data/datasets/cosd/model.py",
+    "schemas/datasets/demographics/demographics.yaml": "src/nuh_data/datasets/demographics/model.py",
 }
 
 GEN_ARGS = ["gen-pydantic"]

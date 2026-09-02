@@ -56,6 +56,7 @@ jobs:
         run: |
           uv run gen-doc -d docs/datasets/sact schemas/datasets/sact/sact.yaml
           uv run gen-doc -d docs/datasets/cosd schemas/datasets/cosd/cosd.yaml
+          uv run gen-doc -d docs/datasets/demographics schemas/datasets/demographics/demographics.yaml
 
       - name: Deploy docs
         run: uv run mkdocs gh-deploy --force
