@@ -21,3 +21,32 @@ jobs:
     with:
       node-version: "24"
     secrets: inherit
+
+  datadict:
+    needs: release
+    if: needs.release.outputs.release-created == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout released tag
+        uses: actions/checkout@v7.0.1
+        with:
+          ref: ${{ needs.release.outputs.release-tag }}
+
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1 
+        with:
+          python-version: "3.13"
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Install dependencies
+        run: uv sync --group dev --no-progress
+
+      - name: Generate data dictionary CSVs
+        run: uv run python scripts/gen_datadict.py
+
+      - name: Attach CSVs to release
+        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # 3.0.3
+        with:
+          tag_name: ${{ needs.release.outputs.release-tag }}
+          files: dist/*.csv
+
